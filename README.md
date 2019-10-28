@@ -17,3 +17,19 @@
 
 
 </ul>
+
+<br>
+
+
+## Installation
+<ul>
+	<li>Copy the files to your root directory</li>
+	<li>Change database connection details at application/config/database.php</li>
+	<li>then go to your_url/index.php/install to prepare the database for the web app</li>
+
+</ul>
+
+<br>
+
+## Requirement
+PHP 5.6+,MSQL 5+ 
