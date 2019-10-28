@@ -2183,18 +2183,14 @@ $this->schools_model->insert_subscription($subscription);
 $_SESSION['action_status_report'] = "<span class='w3-text-green w3-center'>Account Upgraded Successfully</span><br>";
 $this->session->mark_as_flash('action_status_report');
 
+  $data['web_favicon_slug'] = "assets/images/favicon.ico";
+      $data['title'] = $this->siteName." | Upgrade Successfull";
+      $data['author'] =  $this->author;
+      $data['keywords'] =  $this->keywords;
+      $data['description'] =  $this->description;
+      $data["noindex"] =  $this->noindex;
+ 
 
-
-
-
-$data['web_favicon_slug'] = "assets/images/favicon.ico";
-    $data['description'] = NULL;
-    $data["title"] ="Gettew | Upgrade Successfull";
-    $data["keywords"] ="gettew,school,free,Management,Software,result,checking";
-    $data["author"] ="Ojeyinka olaniyi philip";
-    $data["descriptions"] ="Online and offline school Management Service for schools
-    and colleges";
-    $data["noindex"] ='<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">';
 $data['school'] =$school;
 
 
