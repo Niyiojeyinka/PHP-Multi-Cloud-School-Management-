@@ -1271,16 +1271,13 @@ show_page('Gettew_dashboard/result_settings');
 
 
        public function school_settings(){
-    $data['web_favicon_slug'] = "assets/images/favicon.ico";
-    $data['description'] = NULL;
-    $data["title"] ="Gettew | School Level Settings";
-    $data["keywords"] ="gettew,school,free,Management,Software,result,checking";
-    $data["author"] ="Ojeyinka olaniyi philip";
-    $data["descriptions"] ="Online and offline school Management Service for schools
-    and colleges";
-    $data["noindex"] ='<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">';
-
-
+      $data['web_favicon_slug'] = "assets/images/favicon.ico";
+      $data['title'] = $this->siteName." | School Settings";
+      $data['author'] =  $this->author;
+      $data['keywords'] =  $this->keywords;
+      $data['description'] =  $this->description;
+      $data["noindex"] =  $this->noindex;
+ 
 
 
 $data['school_id'] = $_SESSION['school_id'];
