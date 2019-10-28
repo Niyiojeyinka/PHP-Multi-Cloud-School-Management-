@@ -1,0 +1,24 @@
+{
+	"name": "Combine",
+	"id": "combine",
+	"version": 1.0,
+	"api": 1.0,
+	"author": "Olaniyi Ojeyinka",
+	"author_link": "www.fb.com/niyiojeyinka",
+	"admin_route_file": "admin_route.php",
+	"public_route_file": "public_route.php",
+	"asset_folder": "asset",
+	"images": ["combine.png", "combine2.png", "combine3.png"],
+	"support": [
+		"slider_support",
+		"result_support",
+		"blog_support",
+		"event_support",
+		"favicon_support"
+	],
+	"admin_options": [
+		["fa fa-cogs", "Other Settings", "setting"],
+		["fa fa-home", "Edit HomePage", "edit_home"]
+	],
+	"tags": ["responsive", "news", "slider", "event"]
+}

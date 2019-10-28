@@ -1,0 +1,29 @@
+   TODO(s)
+
+   -- Gettew Theme Search
+   -- implement gettew theme demo suit
+   --on upload by developer we insert theme details into db(table:themes)
+---on theme upload move the images to a folder under assets/themes/{themes id} name 
+---on theme upload move the admin folder to a folder under application/views/admin_themes_settings 
+--on theme install default asset details will be save to db on table websites so user will be able to upload
+--implement search in admin dashboard
+--news preview on users theme
+
+--theme_id naming must be a valid folder naming convention 
+
+    default theme folder structure
+
+    -> asset folder
+    ->  admin pages Folder
+    -> json file
+    -> index file (system(gettew) will copy here)
+
+
+              Theme variety of "GET STARTED"
+              --unedited
+              --edited
+
+
+
+              Next Feature 
+              ---open gallery in live edit to choose image 

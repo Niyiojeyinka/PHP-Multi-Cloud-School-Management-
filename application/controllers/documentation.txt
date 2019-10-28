@@ -1,0 +1,11 @@
+--We recommend using $_SERVER["PHP_SELF"] for your action in admin section
+--we recommend inline styling for the admin section also
+
+==>insertSettings(key,value)
+    --value can be anytype of data and datatype even array
+    --key should always be remembered because its what you will need to retreive data
+==>getSettings(key)
+   --check insertSettings
+
+==>renderAdminPage(file_name)
+     --this is used to load the file with name file_name
