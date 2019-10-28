@@ -332,19 +332,13 @@ unset($_SESSION['message']);
 public function post_send_sms()
 {
 
-
-
-
-
-    $data['web_favicon_slug'] = "assets/images/favicon.ico";
-    $data['description'] = NULL;
-    $data["title"] ="Gettew | SMS Status";
-    $data["keywords"] ="gettew,school,free,Management,Software,result,checking";
-    $data["author"] ="Ojeyinka olaniyi philip";
-    $data["descriptions"] ="Online and offline school Management Service for schools
-    and colleges";
-    $data["noindex"] ='<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">';
-   
+  $data['web_favicon_slug'] = "assets/images/favicon.ico";
+      $data['title'] = $this->siteName." | SMS Status";
+      $data['author'] =  $this->author;
+      $data['keywords'] =  $this->keywords;
+      $data['description'] =  $this->description;
+      $data["noindex"] =  $this->noindex;
+    
  $data['school'] = $this->schools_model->get_school_by_id($_SESSION['school_id']);   
 
  $data['messages'] = $this->schools_model->get_messages(array("school_id"=> $_SESSION['school_id'],"ref" => $_SESSION['last_sms_ref']  )); 
