@@ -43,9 +43,7 @@
       $data['keywords'] =  $this->keywords;
       $data['description'] =  $this->description;
       $data["noindex"] =  $this->noindex;
-
-     
-   
+ 
     $this->load->view('team/admin/header_view',$data);
     $this->load->view('team/admin/sidebar_view',$data);
     $this->load->view('team/admin/index_view',$data);
