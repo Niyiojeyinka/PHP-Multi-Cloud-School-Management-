@@ -24,6 +24,15 @@
 
 <br>
 
+## Todo
+<ul>
+	<li>Total Refactoring</li>
+	<li>Auto Team Installation</li>
+    <li>Dynamic Payment integration</li>
+    <li>Auto install</li>
+</ul>
+
+<br>
 
 ## Installation
 <ul>
