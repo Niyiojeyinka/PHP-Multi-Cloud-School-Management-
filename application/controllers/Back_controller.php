@@ -35,8 +35,6 @@
     public function index()
     {
   
-
-
       $data['web_favicon_slug'] = "assets/images/favicon.ico";
       $data['title'] = $this->siteName." | Dashboard";
       $data['author'] =  $this->author;
