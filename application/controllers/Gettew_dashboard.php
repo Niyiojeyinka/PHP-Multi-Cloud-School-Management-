@@ -1912,9 +1912,6 @@ $data['school_id'] = $_SESSION['school_id'];
 $data['school_id'] = $_SESSION['school_id'];
 
     $data['staff'] = $this->staff_model->get_staff_member_by_reg_no($id);
-   //$data['student']['class'] = $this->schools_model->get_class_name_by_level($data['student']['class'],$data['school_id']);
-
-
 
           $this->load->view('users/admin/common/header_view',$data);
           $this->load->view('users/admin/common/nav_view',$data);
