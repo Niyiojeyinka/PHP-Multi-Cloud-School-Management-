@@ -47,7 +47,6 @@
     $this->load->view('team/admin/header_view',$data);
     $this->load->view('team/admin/sidebar_view',$data);
     $this->load->view('team/admin/index_view',$data);
-    //$this->load->view('team/admin/footer_view',$data);
 
 
     }
