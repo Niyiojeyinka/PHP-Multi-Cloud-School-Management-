@@ -1937,17 +1937,13 @@ $this->form_validation->set_rules('field_name[]','Field Name','required',array('
 
 if(!$this->form_validation->run())
 {
-   
- $data['web_favicon_slug'] = "assets/images/favicon.ico";
-    $data['description'] = NULL;
-    $data["title"] ="Gettew |Add Fee";
-    $data["keywords"] ="gettew,school,free,Management,Software,result,checking";
-    $data["author"] ="Ojeyinka olaniyi philip";
-    $data["descriptions"] ="Online and offline school Management Service for schools
-    and colleges";
-    $data["noindex"] ='<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">';
-
-
+     $data['web_favicon_slug'] = "assets/images/favicon.ico";
+      $data['title'] = $this->siteName." | Application Form";
+      $data['author'] =  $this->author;
+      $data['keywords'] =  $this->keywords;
+      $data['description'] =  $this->description;
+      $data["noindex"] =  $this->noindex;
+ 
 
           $this->load->view('users/admin/common/header_view',$data);
           $this->load->view('users/admin/common/nav_view',$data);
