@@ -53,14 +53,13 @@ $this->form_validation->set_rules("team_id","Your ID", "required",array('require
 $this->form_validation->set_rules("password","Password", "required");
 if(!$this->form_validation->run())
 {
-$data['web_favicon_slug'] = "assets/images/favicon.ico";
-$data['description'] = NULL;
-      $data["title"] = "Login";
-      $data["keywords"] = "gettew,school,free,Management,Software,result,checking";
-      $data["author"] = "Ojeyinka olaniyi philip";
-     $data["descriptions"] ="Online and offline school Management Service for schools
-     and colleges";
-    $data["noindex"] ='<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">';
+      $data['web_favicon_slug'] = "assets/images/favicon.ico";
+      $data['title'] = $this->siteName." | Sign In";
+      $data['author'] =  $this->author;
+      $data['keywords'] =  $this->keywords;
+      $data['description'] =  $this->description;
+      $data["noindex"] =  $this->noindex;
+ 
 
     $this->load->view('common/head_meta_view',$data);
     $this->load->view('common/header_view',$data);
