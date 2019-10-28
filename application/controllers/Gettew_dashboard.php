@@ -158,14 +158,13 @@ public function manage_subject()
   if(!$this->form_validation->run())
   {
 
- $data['web_favicon_slug'] = "assets/images/favicon.ico";
-    $data['description'] = NULL;
-    $data["title"] ="Gettew | Add Subject";
-    $data["keywords"] ="gettew,school,free,Management,Software,result,checking";
-    $data["author"] ="Ojeyinka olaniyi philip";
-    $data["descriptions"] ="Online and offline school Management Service for schools
-    and colleges";
-    $data["noindex"] ='<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">';
+  $data['web_favicon_slug'] = "assets/images/favicon.ico";
+      $data['title'] = $this->siteName." |Manage Subject";
+      $data['author'] =  $this->author;
+      $data['keywords'] =  $this->keywords;
+      $data['description'] =  $this->description;
+      $data["noindex"] =  $this->noindex;
+ 
 
 $data['added_subjects'] = $this->schools_model->get_subjects($_SESSION['school_id']);
 
