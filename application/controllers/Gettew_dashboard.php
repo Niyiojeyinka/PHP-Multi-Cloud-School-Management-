@@ -2138,7 +2138,7 @@ if (($school['license'] == "active" && time() < $school['license_expire']) || ($
 $this->form_validation->set_rules('domain','Domain','required');
 if (!$this->form_validation->run()) {
       $data['web_favicon_slug'] = "assets/images/favicon.ico";
-      $data['title'] = $this->siteName." | Sign In";
+      $data['title'] = $this->siteName." | Upgrade Account";
       $data['author'] =  $this->author;
       $data['keywords'] =  $this->keywords;
       $data['description'] =  $this->description;
