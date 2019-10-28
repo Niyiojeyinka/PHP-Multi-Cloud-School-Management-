@@ -480,10 +480,6 @@ $this->upload->do_upload('profileimage');
 
     }else{
 
-
-
-
-
 do {
  
 //create random alpha numeric
