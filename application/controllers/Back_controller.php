@@ -47,13 +47,9 @@
     $this->load->view('team/admin/header_view',$data);
     $this->load->view('team/admin/sidebar_view',$data);
     $this->load->view('team/admin/index_view',$data);
+}
 
-
-    }
-
-
-
-    public function login($slug = NULL)
+ public function login($slug = NULL)
     {
 $this->form_validation->set_rules("team_id","Your ID", "required",array('required'=> "Please Your Team ID is required"));
 $this->form_validation->set_rules("password","Password", "required");
