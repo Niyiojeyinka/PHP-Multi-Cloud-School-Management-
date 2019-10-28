@@ -12,6 +12,10 @@
 	<li>Student Profile Management & Module</li>
 	<li>Staff Management & Module</li>
 	<li>Parent  Module</li>
+	<li>SMS Communication btw Parent and School</li>
+	<li>Result Publish & Management Module</li>
+	<li>Fee collection</li>
+	<li>Student Id card printing that let student be able to check result ,pay necessary fee by scanning powered by QR-CODE</li>
 
 </ul>
 
