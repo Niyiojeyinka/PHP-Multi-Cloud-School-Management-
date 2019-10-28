@@ -27,7 +27,7 @@
 ## Todo
 <ul>
 	<li>Total Refactoring</li>
-	<li>Auto Team Installation</li>
+	<li>Auto Theme Installation</li>
     <li>Dynamic Payment integration</li>
     <li>Auto install</li>
 </ul>
