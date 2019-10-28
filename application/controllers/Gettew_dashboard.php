@@ -1365,16 +1365,13 @@ $data['options'] = json_decode($this->schools_model->get_student_option($_SESSIO
 
 
 if (!$this->form_validation->run()) {
+   $data['web_favicon_slug'] = "assets/images/favicon.ico";
+      $data['title'] = $this->siteName." | Add FEE";
+      $data['author'] =  $this->author;
+      $data['keywords'] =  $this->keywords;
+      $data['description'] =  $this->description;
+      $data["noindex"] =  $this->noindex;
  
- $data['web_favicon_slug'] = "assets/images/favicon.ico";
-    $data['description'] = NULL;
-    $data["title"] ="Gettew |Add Fee";
-    $data["keywords"] ="gettew,school,free,Management,Software,result,checking";
-    $data["author"] ="Ojeyinka olaniyi philip";
-    $data["descriptions"] ="Online and offline school Management Service for schools
-    and colleges";
-    $data["noindex"] ='<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">';
-
 $data['added_subjects'] = $this->schools_model->get_subjects($_SESSION['school_id']);
 $data['schl_sec_div'] = json_decode($this->schools_model->get_school_by_id($_SESSION['school_id'])['session_division']);
 
