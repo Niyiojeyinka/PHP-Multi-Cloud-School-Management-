@@ -15,7 +15,7 @@
     {
         parent::__construct();
 
-        $this->load->model(array('users_model','schools_model','parents_model','staff_model','students_model','blog_model'));
+        $this->load->model(array('users_model','schools_model','parents_model','staff_model','students_model','blog_model','back_model'));
       $this->load->helper(array('url','form','page_helper'));
         $this->load->library(array('form_validation','session','user_agent'));
 
@@ -27,7 +27,7 @@
        {    
        show_page('login');     }
 
-       
+
 
       $this->siteName = $this->back_model->get_system_variable("site_name");
       $this->author = $this->back_model->get_system_variable("author");
