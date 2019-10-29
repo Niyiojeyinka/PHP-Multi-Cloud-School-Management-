@@ -15,6 +15,11 @@ public function __construct()
        {    
        show_page('login');     }
 
+   $this->siteName = $this->back_model->get_system_variable("site_name");
+      $this->author = $this->back_model->get_system_variable("author");
+      $this->keywords = $this->back_model->get_system_variable("keywords");
+      $this->description= $this->back_model->get_system_variable("description");
+      $this->noindex = '<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">';
 
 
 }
