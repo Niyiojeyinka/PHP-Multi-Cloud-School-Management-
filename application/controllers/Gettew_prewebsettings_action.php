@@ -76,7 +76,12 @@ public function __construct()
 
 public function theme_details($theme_id = NULL,$sub_domain = NULL)
 {
- 
+    $data['web_favicon_slug'] = "assets/images/favicon.ico";
+      $data['title'] = $this->siteName." | install theme";
+      $data['author'] =  $this->author;
+      $data['keywords'] =  $this->keywords;
+      $data['description'] =  $this->description;
+      $data["noindex"] =  $this->noindex;
 
 $data['theme'] = $this->websites_model->get_theme_by_id($theme_id);
 
