@@ -6,7 +6,7 @@ class Gettew_prewebsettings extends CI_Controller {
 public function __construct()
 {
      parent::__construct();
-  $this->load->model(array('websites_model','schools_model','users_model'));
+  $this->load->model(array('websites_model','schools_model','users_model','back_model'));
   $this->load->helper(array('url','form','blog_helper','page_helper','theme_helper'));
      $this->load->library(array('form_validation','user_agent'));
 
@@ -15,7 +15,7 @@ public function __construct()
        {    
        show_page('login');     }
 
-       
+
 
       $this->siteName = $this->back_model->get_system_variable("site_name");
       $this->author = $this->back_model->get_system_variable("author");
