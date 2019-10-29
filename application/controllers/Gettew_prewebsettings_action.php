@@ -15,7 +15,7 @@ public function __construct()
        {    
        show_page('login');     }
 
-       
+
 
       $this->siteName = $this->back_model->get_system_variable("site_name");
       $this->author = $this->back_model->get_system_variable("author");
@@ -58,15 +58,12 @@ public function __construct()
        $this->pagination->initialize($config);
   $data['pagination'] = $this->pagination->create_links();
 
-$data['web_favicon_slug'] = "assets/images/favicon.ico";
-$data['description'] = NULL;
-      $data["title"] ="Gettew |  Your School Website in few clicks";
-      $data["keywords"] ="gettew,school,free,Management,Software,result,checking";
-      $data["author"] ="Ojeyinka olaniyi philip";
-     $data["descriptions"] ="Online and offline school Management Service for schools
-     and colleges";
-    $data["noindex"] ='<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">';
-
+    $data['web_favicon_slug'] = "assets/images/favicon.ico";
+      $data['title'] = $this->siteName." | Your website school in few minutes";
+      $data['author'] =  $this->author;
+      $data['keywords'] =  $this->keywords;
+      $data['description'] =  $this->description;
+      $data["noindex"] =  $this->noindex;
 
           $this->load->view('users/admin/common/header_view',$data);
           $this->load->view('users/admin/common/nav_view',$data);
@@ -79,14 +76,7 @@ $data['description'] = NULL;
 
 public function theme_details($theme_id = NULL,$sub_domain = NULL)
 {
-$data['web_favicon_slug'] = "assets/images/favicon.ico";
-$data['description'] = NULL;
-      $data["title"] ="Gettew | Install Theme";
-      $data["keywords"] ="gettew,school,free,Management,Software,result,checking";
-      $data["author"] ="Ojeyinka olaniyi philip";
-     $data["descriptions"] ="Online and offline school Management Service for schools
-     and colleges";
-    $data["noindex"] ='<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">';
+ 
 
 $data['theme'] = $this->websites_model->get_theme_by_id($theme_id);
 
