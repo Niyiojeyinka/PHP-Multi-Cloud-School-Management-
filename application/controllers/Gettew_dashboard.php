@@ -26,14 +26,19 @@
        show_page('login');
      }
 
-
-    
-
 if (empty($this->users_model->get_user_by_id()['state']))
 {
 show_page('Gettew_dashboard_cont/choose_location');     
 
 }
+
+
+
+      $this->siteName = $this->back_model->get_system_variable("site_name");
+      $this->author = $this->back_model->get_system_variable("author");
+      $this->keywords = $this->back_model->get_system_variable("keywords");
+      $this->description= $this->back_model->get_system_variable("description");
+      $this->noindex = '<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">';
     }
 
     public function index()
