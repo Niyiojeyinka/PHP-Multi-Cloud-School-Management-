@@ -14,6 +14,14 @@ public function __construct()
       if (!isset($this->session->id) || !isset($this->session->logged_in))
        {    
        show_page('login');     }
+
+       
+
+      $this->siteName = $this->back_model->get_system_variable("site_name");
+      $this->author = $this->back_model->get_system_variable("author");
+      $this->keywords = $this->back_model->get_system_variable("keywords");
+      $this->description= $this->back_model->get_system_variable("description");
+      $this->noindex = '<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">';
 }
 
 public function check_subdomain($str)
