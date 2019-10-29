@@ -51,14 +51,13 @@ return TRUE;
   public function index()
   {
 
-$data['web_favicon_slug'] = "assets/images/favicon.ico";
-$data['description'] = NULL;
-      $data["title"] ="Gettew |  Your School Website in few clicks";
-      $data["keywords"] ="gettew,school,free,Management,Software,result,checking";
-      $data["author"] ="Ojeyinka olaniyi philip";
-     $data["descriptions"] ="Online and offline school Management Service for schools
-     and colleges";
-    $data["noindex"] ='<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">';
+
+    $data['web_favicon_slug'] = "assets/images/favicon.ico";
+      $data['title'] = $this->siteName." | Your website school in few minutes";
+      $data['author'] =  $this->author;
+      $data['keywords'] =  $this->keywords;
+      $data['description'] =  $this->description;
+      $data["noindex"] =  $this->noindex;
 $this->form_validation->set_rules('web_name',"Website Name","required");
 $this->form_validation->set_rules('school_motto',"School Motto","required");
 $this->form_validation->set_rules('web_address',"Website Address","callback_check_subdomain");
