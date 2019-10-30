@@ -781,16 +781,12 @@ $data['theme_options'] = json_decode($theme['admin_options'],true);
 
 public function add_slider($address_id =NULL)
 {
-
-$data['web_favicon_slug'] = "assets/images/favicon.ico";
-$data['description'] = NULL;
-      $data["title"] ="Gettew |  Add Slider";
-      $data["keywords"] ="gettew,school,free,Management,Software,result,checking";
-      $data["author"] ="Ojeyinka olaniyi philip";
-     $data["descriptions"] ="Online and offline school Management Service for schools
-     and colleges";
-    $data["noindex"] ='<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">';
-
+     $data['web_favicon_slug'] = "assets/images/favicon.ico";
+      $data['title'] = $this->siteName." | Add Slider";
+      $data['author'] =  $this->author;
+      $data['keywords'] =  $this->keywords;
+      $data['description'] =  $this->description;
+      $data["noindex"] =  $this->noindex;
 
 $cond = array(
 "subdomain" => $address_id
