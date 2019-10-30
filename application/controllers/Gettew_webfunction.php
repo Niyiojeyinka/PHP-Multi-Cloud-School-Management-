@@ -465,16 +465,12 @@ elseif ($item_type == "subject") {
 public function confirm_delete($address_id = NULL,$item_type = NULL,$id = NULL)
 {
 
-
-$data['web_favicon_slug'] = "assets/images/favicon.ico";
-$data['description'] = NULL;
-      $data["title"] ="Gettew |  Action Confirmation";
-      $data["keywords"] ="gettew,school,free,Management,Software,result,checking";
-      $data["author"] ="Ojeyinka olaniyi philip";
-     $data["descriptions"] ="Online and offline school Management Service for schools
-     and colleges";
-    $data["noindex"] ='<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">';
-
+     $data['web_favicon_slug'] = "assets/images/favicon.ico";
+      $data['title'] = $this->siteName." | Confirm Delete";
+      $data['author'] =  $this->author;
+      $data['keywords'] =  $this->keywords;
+      $data['description'] =  $this->description;
+      $data["noindex"] =  $this->noindex;
 $data['item_type'] =$item_type;
 $data['id'] =$id;
 $data['address_id'] =$address_id;
