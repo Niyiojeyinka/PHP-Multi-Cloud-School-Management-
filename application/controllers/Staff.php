@@ -264,12 +264,13 @@ $data['school'] = $this->schools_model->get_school_by_id($_SESSION['school_id'])
 
 public function news_preview($slug)
 {
-
-      $data['web_favicon_slug'] = "assets/images/favicon.ico";
-      $data['title'] = $this->siteName." | News Preview";
+ $data['web_favicon_slug'] = "assets/images/favicon.ico";
+      $data['title'] = $this->siteName." | Parents' Dashboard";
       $data['author'] =  $this->author;
       $data['keywords'] =  $this->keywords;
       $data['description'] =  $this->description;
+      $data["noindex"] =  $this->noindex;
+
 
 $data['school'] = $this->schools_model->get_school_by_id($_SESSION['school_id']);
 
