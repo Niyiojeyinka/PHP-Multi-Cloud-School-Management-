@@ -122,15 +122,13 @@ if($data['school']['fee_option'] == "term")
 
 public function pre_paymentgateway_fee()
 {if (isset($_POST['submit'])) {
-  
 
 $data['web_favicon_slug'] = "assets/images/favicon.ico";
-$data['description'] = NULL;
-      $data["title"] ="Gettew |PAY FEES";
-      $data["keywords"] ="gettew,school,free,Management,Software,result,checking";
-      $data["author"] ="Ojeyinka olaniyi philip";
-     $data["descriptions"] ="Online and offline school Management Service for schools
-     and colleges";
+      $data["title"] = $this->siteName." | Pay Fees";
+      $data['author'] =  $this->author;
+      $data['keywords'] =  $this->keywords;
+      $data['description'] =  $this->description;
+
 $child_id = $this->input->post('student_id');
     $data['child'] = $this->students_model->get_student_by_reg_no($child_id);
 $data['parent']= $this->parents_model->get_parent_by_id($data['child']['parent_id']);
