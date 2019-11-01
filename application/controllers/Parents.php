@@ -386,10 +386,8 @@ if($data['school']['fee_option'] == "term")
 
 public function check_results($child_id= NULL)
 {
-if($child_id == NULL)
-  {
 
-      $data['web_favicon_slug'] = "assets/images/favicon.ico";
+    $data['web_favicon_slug'] = "assets/images/favicon.ico";
       $data['title'] = $this->siteName." | Select Child";
       $data['author'] =  $this->author;
       $data['keywords'] =  $this->keywords;
@@ -397,7 +395,8 @@ if($child_id == NULL)
 $data['parent']= $this->parents_model->get_parent_by_id($_SESSION['parent_id']);
 $data['children'] = $this->students_model->get_students_by_parent_id($_SESSION['parent_id']);
 
-
+if($child_id == NULL)
+  {
        $this->load->view('common/head_meta_view',$data);
         $this->load->view('users/parent/common/header_view',$data);
         $this->load->view('users/parent/select_child_view',$data);
@@ -405,14 +404,6 @@ $data['children'] = $this->students_model->get_students_by_parent_id($_SESSION['
 
 
   }else{
-
-$data['web_favicon_slug'] = "assets/images/favicon.ico";
-$data['description'] = NULL;
-      $data["title"] ="Gettew.com | Check Result";
-      $data["keywords"] ="gettew,school,free,Management,Software,result,checking";
-      $data["author"] ="Ojeyinka olaniyi philip";
-     $data["descriptions"] ="Online and offline school Management Service for schools
-     and colleges";
 
 
 
