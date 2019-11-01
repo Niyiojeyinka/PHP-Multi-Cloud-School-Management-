@@ -63,7 +63,7 @@ $data['staff']= $this->staff_model->get_staff_member_by_reg_no($_SESSION['staff_
 
    }
 
-     
+
 public function process_profile_image()
 {
 
@@ -92,12 +92,13 @@ show_page("staff/index");
 public function settings()
     {
  
-
-      $data['web_favicon_slug'] = "assets/images/favicon.ico";
-      $data['title'] = $this->siteName." | Settings";
+ $data['web_favicon_slug'] = "assets/images/favicon.ico";
+      $data['title'] = $this->siteName." | Parents' Dashboard";
       $data['author'] =  $this->author;
       $data['keywords'] =  $this->keywords;
       $data['description'] =  $this->description;
+      $data["noindex"] =  $this->noindex;
+
     $data['school'] = $this->schools_model->get_school_by_id($_SESSION['school_id']);
 
        $this->load->view('common/head_meta_view',$data);
