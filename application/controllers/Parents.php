@@ -85,15 +85,11 @@ show_page("staff/index");
 public function account_settings()
     {
  
-$data['web_favicon_slug'] = "assets/images/favicon.ico";
-$data['description'] = NULL;
-      $data["title"] ="Gettew | Account Settings";
-      $data["keywords"] ="gettew,school,free,Management,Software,result,checking";
-      $data["author"] ="Ojeyinka Olaniyi Philip";
-     $data["descriptions"] ="Online and offline school Management Service for schools
-     and colleges";
-    
-
+      $data['web_favicon_slug'] = "assets/images/favicon.ico";
+      $data['title'] = $this->siteName." | Account Settings";
+      $data['author'] =  $this->author;
+      $data['keywords'] =  $this->keywords;
+      $data['description'] =  $this->description;
        $this->load->view('common/head_meta_view',$data);
         $this->load->view('users/parent/common/header_view',$data);
         $this->load->view('users/parent/settings_view',$data);
