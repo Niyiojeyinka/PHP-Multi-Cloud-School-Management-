@@ -388,14 +388,12 @@ public function check_results($child_id= NULL)
 {
 if($child_id == NULL)
   {
-$data['web_favicon_slug'] = "assets/images/favicon.ico";
-$data['description'] = NULL;
-      $data["title"] ="Gettew | Select Child";
-      $data["keywords"] ="gettew,school,free,Management,Software,result,checking";
-      $data["author"] ="Ojeyinka olaniyi philip";
-     $data["descriptions"] ="Online and offline school Management Service for schools
-     and colleges";
-    
+
+      $data['web_favicon_slug'] = "assets/images/favicon.ico";
+      $data['title'] = $this->siteName." | Select Child";
+      $data['author'] =  $this->author;
+      $data['keywords'] =  $this->keywords;
+      $data['description'] =  $this->description;
 $data['parent']= $this->parents_model->get_parent_by_id($_SESSION['parent_id']);
 $data['children'] = $this->students_model->get_students_by_parent_id($_SESSION['parent_id']);
 
