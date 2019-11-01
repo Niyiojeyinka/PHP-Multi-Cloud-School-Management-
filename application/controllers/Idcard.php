@@ -35,16 +35,11 @@
 
     public function gateway($id)
     {
-
 $data['web_favicon_slug'] = "assets/images/favicon.ico";
-$data['description'] = NULL;
       $data["title"] ="Scan Id";
-      $data["keywords"] ="gettew,school,free,Management,Software,result,checking";
-      $data["author"] ="Ojeyinka olaniyi philip";
-     $data["descriptions"] ="Online and offline school Management Service for schools
-     and colleges";
-
-
+      $data['author'] =  $this->author;
+      $data['keywords'] =  $this->keywords;
+      $data['description'] =  $this->description;
 $data['student'] = $this->students_model->get_student_by_reg_no($id);
 $data['school'] = $this->schools_model->get_school_by_id($data['student']['school_id']);
 
