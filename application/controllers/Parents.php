@@ -90,6 +90,8 @@ public function account_settings()
       $data['author'] =  $this->author;
       $data['keywords'] =  $this->keywords;
       $data['description'] =  $this->description;
+      $data["noindex"] =  $this->noindex;
+
        $this->load->view('common/head_meta_view',$data);
         $this->load->view('users/parent/common/header_view',$data);
         $this->load->view('users/parent/settings_view',$data);
