@@ -26,7 +26,7 @@
        show_page('staff/login');
      }
 
-     
+
    $this->siteName = $this->back_model->get_system_variable("site_name");
       $this->author = $this->back_model->get_system_variable("author");
       $this->keywords = $this->back_model->get_system_variable("keywords");
@@ -41,14 +41,13 @@
     public function dashboard()
     {
  
-$data['web_favicon_slug'] = "assets/images/favicon.ico";
-$data['description'] = NULL;
-      $data["title"] ="Gettew |  Staff Dashboard";
-      $data["keywords"] ="gettew,school,free,Management,Software,result,checking";
-      $data["author"] ="Ojeyinka olaniyi philip";
-     $data["descriptions"] ="Online and offline school Management Service for schools
-     and colleges";
-    $data['school'] = $this->schools_model->get_school_by_id($_SESSION['school_id']);
+
+      $data['web_favicon_slug'] = "assets/images/favicon.ico";
+      $data['title'] = $this->siteName." | Staff Dashboard";
+      $data['author'] =  $this->author;
+      $data['keywords'] =  $this->keywords;
+      $data['description'] =  $this->description;    
+      $data['school'] = $this->schools_model->get_school_by_id($_SESSION['school_id']);
 
 $data['school_sessions'] = json_decode($data['school']['session'],true);
 
