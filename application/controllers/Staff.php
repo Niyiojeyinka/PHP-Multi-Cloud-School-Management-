@@ -14,7 +14,7 @@
         parent::__construct();
 
         $this->load->model(array('users_model','schools_model',
-          'students_model','parents_model','websites_model','staff_model','blog_model'));
+          'students_model','parents_model','websites_model','staff_model','blog_model','back_model'));
       $this->load->helper(array('url','form','page_helper'));
         $this->load->library(array('form_validation','user_agent'));
 
