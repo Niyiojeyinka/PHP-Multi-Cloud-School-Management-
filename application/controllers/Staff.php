@@ -295,13 +295,15 @@ $this->form_validation->set_rules('title','Article Title','required');
 $this->form_validation->set_rules('contents','Article Contents','required');
 
 if (!$this->form_validation->run()) {
-  
-
-      $data['web_favicon_slug'] = "assets/images/favicon.ico";
+  $data['web_favicon_slug'] = "assets/images/favicon.ico";
       $data['title'] = $this->siteName." | Add New Article";
       $data['author'] =  $this->author;
       $data['keywords'] =  $this->keywords;
       $data['description'] =  $this->description;
+      $data["noindex"] =  $this->noindex;
+ 
+
+ 
 $data['school'] = $this->schools_model->get_school_by_id($_SESSION['school_id']);
 
     $this->load->view('common/head_meta_view',$data);
