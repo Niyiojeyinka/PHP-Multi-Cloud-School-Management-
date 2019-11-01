@@ -478,13 +478,13 @@ $data['result_elements'] = $this->schools_model->get_results_elements(array("sch
 
 public function view_payment_history($child_id)
 {
-$data['web_favicon_slug'] = "assets/images/favicon.ico";
-$data['description'] = NULL;
-      $data["title"] ="Gettew | Manage Payments";
-      $data["keywords"] ="gettew,school,free,Management,Software,result,checking";
-      $data["author"] ="Ojeyinka olaniyi philip";
-     $data["descriptions"] ="Online and offline school Management Service for schools
-     and colleges";
+    $data['web_favicon_slug'] = "assets/images/favicon.ico";
+      $data['title'] = $this->siteName." | Manage Payment";
+      $data['author'] =  $this->author;
+      $data['keywords'] =  $this->keywords;
+      $data['description'] =  $this->description;
+$data['parent']= $this->parents_model->get_parent_by_id($_SESSION['parent_id']);
+$data['children'] = $this->students_model->get_students_by_parent_id($_SESSION['parent_id']);
 
     $data['child'] = $this->students_model->get_student_by_reg_no($child_id);
 $data['parent']= $this->parents_model->get_parent_by_id($data['child']['parent_id']);
