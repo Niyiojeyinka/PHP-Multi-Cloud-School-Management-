@@ -16,6 +16,7 @@ public function __construct()
       $this->author = $this->back_model->get_system_variable("author");
       $this->keywords = $this->back_model->get_system_variable("keywords");
       $this->description= $this->back_model->get_system_variable("description");
+      $this->tagLine= $this->back_model->get_system_variable("tagline");
       $this->noindex = '<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">';
 
 
