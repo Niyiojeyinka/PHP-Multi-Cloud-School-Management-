@@ -483,6 +483,8 @@ public function view_payment_history($child_id)
       $data['author'] =  $this->author;
       $data['keywords'] =  $this->keywords;
       $data['description'] =  $this->description;
+      $data["noindex"] =  $this->noindex;
+
 $data['parent']= $this->parents_model->get_parent_by_id($_SESSION['parent_id']);
 $data['children'] = $this->students_model->get_students_by_parent_id($_SESSION['parent_id']);
 
