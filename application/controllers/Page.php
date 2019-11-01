@@ -6,7 +6,7 @@ class Page extends CI_Controller {
 public function __construct()
 {
      parent::__construct();
-  $this->load->model(array('users_model','staff_model','parents_model','students_model'));
+  $this->load->model(array('users_model','staff_model','parents_model','students_model','back_model'));
   $this->load->helper(array('url','form','blog_helper','page_helper'));
      $this->load->library(array('form_validation','session'));
 
