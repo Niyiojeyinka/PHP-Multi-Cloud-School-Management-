@@ -293,14 +293,11 @@ show_page("Idcard/pay_fees/".$student_id);
 public function check_results($child_id)
 {
 
-  $data['web_favicon_slug'] = "assets/images/favicon.ico";
-$data['description'] = NULL;
-      $data["title"] ="ID Card | Check Result";
-      $data["keywords"] ="gettew,school,free,Management,Software,result,checking";
-      $data["author"] ="Ojeyinka olaniyi philip";
-     $data["descriptions"] ="Online and offline school Management Service for schools
-     and colleges";
-
+$data['web_favicon_slug'] = "assets/images/favicon.ico";
+      $data["title"] = "Check Results";
+      $data['author'] =  $this->author;
+      $data['keywords'] =  $this->keywords;
+      $data['description'] =  $this->description;
 
 
 $data['child'] = $this->students_model->get_student_by_reg_no($child_id);
