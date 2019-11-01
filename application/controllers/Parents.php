@@ -43,7 +43,7 @@
  
 
       $data['web_favicon_slug'] = "assets/images/favicon.ico";
-      $data['title'] = $this->siteName." | Parents' Dashboard";;
+      $data['title'] = $this->siteName." | Parents' Dashboard";
       $data['author'] =  $this->author;
       $data['keywords'] =  $this->keywords;
       $data['description'] =  $this->description;
