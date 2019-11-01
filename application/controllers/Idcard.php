@@ -139,26 +139,7 @@ $data['school_sessions'] = json_decode($data['school']['session'],true);
 $session = $data['school_sessions'][count($data['school_sessions'])-1];
 $term = $data['school']['term'];
 //school_id term session 
-/*
- $data['payable_fees'] = NULL;
 
-if($data['school']['fee_option'] == "term")
-{
-  //divisional
-  //get fee by current division/term and session and school_id and or fee_option == "general" and fee_option == myoptio level== level
-
-  $data['payable_fees'] = $this->parents_model->get_divisional_payable_fees($session,$term,$data['school']['id'],$data['child']);
-
-
-
-}else{
-//sessional
-  //get fee by current session and school_id and or fee_option == "general" level== level
-
-  $data['payable_fees'] =  $this->parents_model->get_divisional_payable_fees($session,$term,$data['school']['id'],$data['child']);
-
-}
-*/
 if ($this->input->post('how') =="part") {
 
  $data['amount_to_pay'] =$this->input->post('amount');
