@@ -296,15 +296,17 @@ if($data['school']['fee_option'] == "term")
 
 public function manage_payments($child_id= NULL)
 {
-if($child_id == NULL)
-  {
 
-      $data['web_favicon_slug'] = "assets/images/favicon.ico";
-      $data['title'] = $this->siteName." | Select Child";
+  $data['web_favicon_slug'] = "assets/images/favicon.ico";
       $data['author'] =  $this->author;
       $data['keywords'] =  $this->keywords;
       $data['description'] =  $this->description;
       $data["noindex"] =  $this->noindex;
+if($child_id == NULL)
+  {
+
+      
+      $data['title'] = $this->siteName." | Select Child";
 
 
 $data['parent']= $this->parents_model->get_parent_by_id($_SESSION['parent_id']);
@@ -321,14 +323,7 @@ $data['children'] = $this->students_model->get_students_by_parent_id($_SESSION['
 
 
 
-
-
-      $data['web_favicon_slug'] = "assets/images/favicon.ico";
       $data['title'] = $this->siteName." | Manage Payments";
-      $data['author'] =  $this->author;
-      $data['keywords'] =  $this->keywords;
-      $data['description'] =  $this->description;
-      $data["noindex"] =  $this->noindex;
 
     $data['child'] = $this->students_model->get_student_by_reg_no($child_id);
 $data['parent']= $this->parents_model->get_parent_by_id($data['child']['parent_id']);
