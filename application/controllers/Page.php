@@ -9,6 +9,16 @@ public function __construct()
   $this->load->model(array('users_model','staff_model','parents_model','students_model'));
   $this->load->helper(array('url','form','blog_helper','page_helper'));
      $this->load->library(array('form_validation','session'));
+
+     
+
+   $this->siteName = $this->back_model->get_system_variable("site_name");
+      $this->author = $this->back_model->get_system_variable("author");
+      $this->keywords = $this->back_model->get_system_variable("keywords");
+      $this->description= $this->back_model->get_system_variable("description");
+      $this->noindex = '<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">';
+
+
 }
 
 public function test()
