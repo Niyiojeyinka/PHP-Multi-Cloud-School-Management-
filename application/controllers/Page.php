@@ -271,15 +271,11 @@ public function staff_login($staff_id= NULL)
 $this->form_validation->set_rules("staff_id","Staff ID", "required");
 $this->form_validation->set_rules("password","Password", "required");
 if(!$this->form_validation->run())
-{
-
-$data['web_favicon_slug'] = "assets/images/favicon.ico";
-$data['description'] = NULL;
-      $data["title"] ="Staff Login";
-      $data["keywords"] ="gettew,school,free,Management,Software,result,checking";
-      $data["author"] ="Ojeyinka olaniyi philip";
-     $data["descriptions"] ="Online and offline school Management Service for schools
-     and colleges";
+{     $data['web_favicon_slug'] = "assets/images/favicon.ico";
+      $data['title'] = $this->siteName." | Staff Login";
+      $data['author'] =  $this->author;
+      $data['keywords'] =  $this->keywords;
+      $data['description'] =  $this->description;
 
        $this->load->view('common/head_meta_view',$data); 
           
