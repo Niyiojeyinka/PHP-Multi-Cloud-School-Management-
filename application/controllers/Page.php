@@ -47,15 +47,12 @@ public function test()
 
   public function pricing()
   {
-
-$data['web_favicon_slug'] = "assets/images/favicon.ico";
-$data['description'] = NULL;
-      $data["title"] ="Gettew |  Pricing";
-      $data["keywords"] ="gettew,school,free,Management,Software,result,checking";
-      $data["author"] ="Ojeyinka olaniyi philip";
-     $data["descriptions"] ="Online and offline school Management Service for schools
-     and colleges";
-
+     $data['web_favicon_slug'] = "assets/images/favicon.ico";
+      $data['title'] = $this->siteName." | Pricing";
+      $data['author'] =  $this->author;
+      $data['keywords'] =  $this->keywords;
+      $data['description'] =  $this->description;
+      $data["noindex"] =  $this->noindex;
        $this->load->view('common/head_meta_view',$data); $this->load->view('common/header_view',$data);
         
     $this->load->view('public/pricing_view',$data);
