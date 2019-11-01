@@ -33,7 +33,6 @@ public function test()
       $data['author'] =  $this->author;
       $data['keywords'] =  $this->keywords;
       $data['description'] =  $this->description;
-      $data["noindex"] =  $this->noindex;
 
        $this->load->view('common/head_meta_view',$data); $this->load->view('common/header_view',$data);
         
@@ -52,7 +51,6 @@ public function test()
       $data['author'] =  $this->author;
       $data['keywords'] =  $this->keywords;
       $data['description'] =  $this->description;
-      $data["noindex"] =  $this->noindex;
        $this->load->view('common/head_meta_view',$data); $this->load->view('common/header_view',$data);
         
     $this->load->view('public/pricing_view',$data);
@@ -86,14 +84,11 @@ var_dump(explode(".", $_SERVER[ 'HTTP_HOST' ]));
     {
 
 //echo "test";
-
-$data['web_favicon_slug'] = "assets/images/favicon.ico";
-$data['description'] = NULL;
-      $data["title"] ="Gettew |  School Registration";
-      $data["keywords"] ="gettew,school,free,Management,Software,result,checking";
-      $data["author"] ="Ojeyinka olaniyi philip";
-     $data["descriptions"] ="Online and offline school Management Service for schools
-     and colleges";
+ $data['web_favicon_slug'] = "assets/images/favicon.ico";
+      $data['title'] = $this->siteName." | School Registration";
+      $data['author'] =  $this->author;
+      $data['keywords'] =  $this->keywords;
+      $data['description'] =  $this->description;
 
        $this->load->view('common/head_meta_view',$data); $this->load->view('common/header_view',$data);
         
@@ -150,14 +145,11 @@ $this->form_validation->set_rules("phone","Mobile Phone","trim|required|numeric"
 if ($this->form_validation->run() == FALSE)
 {
 //login page
-
-   $data['web_favicon_slug'] = "assets/images/favicon.ico";
-        $data['description'] = NULL;
-              $data["title"] ="Gettew |  Log In";
-              $data["keywords"] ="gettew,school,free,Management,Software,result,checking";
-              $data["author"] ="Ojeyinka olaniyi philip";
-             $data["descriptions"] ="Online and offline school Management Service for schools
-             and colleges";
+     $data['web_favicon_slug'] = "assets/images/favicon.ico";
+      $data['title'] = $this->siteName." | Sign In";
+      $data['author'] =  $this->author;
+      $data['keywords'] =  $this->keywords;
+      $data['description'] =  $this->description;
      $this->load->view('common/head_meta_view',$data);
 
      $this->load->view('common/header_view',$data);
@@ -202,17 +194,11 @@ $this->form_validation->set_rules('email','Email','required');
 $this->form_validation->set_rules('message','Message Contents','required');
 if(!$this->form_validation->run())
 {
- 
-   
-
-$data['web_favicon_slug'] = "assets/images/favicon.ico";
-$data['description'] = NULL;
-      $data["title"] ="Gettew |  Contact Us";
-      $data["keywords"] ="gettew,school,free,Management,Software,result,checking";
-      $data["author"] ="Ojeyinka olaniyi philip";
-     $data["descriptions"] ="Online and offline school Management Service for schools
-     and colleges";
-
+      $data['web_favicon_slug'] = "assets/images/favicon.ico";
+      $data['title'] = $this->siteName." | Contact Us";
+      $data['author'] =  $this->author;
+      $data['keywords'] =  $this->keywords;
+      $data['description'] =  $this->description;
        $this->load->view('common/head_meta_view',$data); $this->load->view('common/header_view',$data);
         
     $this->load->view('public/contact_view',$data);
