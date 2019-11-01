@@ -10,7 +10,7 @@ public function __construct()
   $this->load->helper(array('url','form','blog_helper','page_helper'));
      $this->load->library(array('form_validation','session'));
 
-     
+
 
    $this->siteName = $this->back_model->get_system_variable("site_name");
       $this->author = $this->back_model->get_system_variable("author");
@@ -27,14 +27,12 @@ public function test()
 }
 	public function index()
 	{
-
-$data['web_favicon_slug'] = "assets/images/favicon.ico";
-$data['description'] = NULL;
-     	$data["title"] ="Gettew |  The Free Cloud School Management Software";
-     	$data["keywords"] ="gettew,school,free,Management,Software,result,checking";
-     	$data["author"] ="Ojeyinka olaniyi philip";
-		 $data["descriptions"] ="Online and offline school Management Service for schools
-     and colleges";
+      $data['web_favicon_slug'] = "assets/images/favicon.ico";
+      $data['title'] = $this->siteName." | ".$this->tagLine;
+      $data['author'] =  $this->author;
+      $data['keywords'] =  $this->keywords;
+      $data['description'] =  $this->description;
+      $data["noindex"] =  $this->noindex;
 
        $this->load->view('common/head_meta_view',$data); $this->load->view('common/header_view',$data);
         
