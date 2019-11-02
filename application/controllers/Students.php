@@ -64,13 +64,16 @@ show_page("id/".$_SESSION['student_id']);
 public function account_settings()
 {
  
-$data['web_favicon_slug'] = "assets/images/favicon.ico";
-$data['description'] = NULL;
-      $data["title"] ="Gettew | Account Settings";
-      $data["keywords"] ="gettew,school,free,Management,Software,result,checking";
-      $data["author"] ="Ojeyinka Olaniyi Philip";
-     $data["descriptions"] ="Online and offline school Management Service for schools
-     and colleges";
+
+
+      $data['web_favicon_slug'] = "assets/images/favicon.ico";
+      $data['title'] = $this->siteName." | Account Settings";
+      $data['author'] =  $this->author;
+      $data['keywords'] =  $this->keywords;
+      $data['description'] =  $this->description;    
+      $data['school'] = $this->schools_model->get_school_by_id($_SESSION['school_id']);
+
+
     
 
        $this->load->view('common/head_meta_view',$data);
