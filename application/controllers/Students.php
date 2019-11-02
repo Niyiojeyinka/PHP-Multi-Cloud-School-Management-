@@ -27,6 +27,14 @@
      }
 
 
+
+   $this->siteName = $this->back_model->get_system_variable("site_name");
+      $this->author = $this->back_model->get_system_variable("author");
+      $this->keywords = $this->back_model->get_system_variable("keywords");
+      $this->description= $this->back_model->get_system_variable("description");
+      $this->tagLine= $this->back_model->get_system_variable("tagline");
+      $this->noindex = '<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">';
+
   }
 
 public function process_profile_image()
