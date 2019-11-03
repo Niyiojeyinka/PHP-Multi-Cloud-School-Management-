@@ -646,8 +646,7 @@ $count = 0;
  foreach($queries as $value)
  {
     $count++;
- $yea= $this->db->query($value);
-  if ($yea)
+  if ($this->db->query($value))
   {
 
   echo "Query  ".$count." executed successfully<br>";
