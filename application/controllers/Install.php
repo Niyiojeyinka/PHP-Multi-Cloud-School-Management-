@@ -1,7 +1,7 @@
 <?php
 /***
  * Name:        Gettew
- * Package:     Initial.php
+ * Package:     Install.php
  * About:        A controller that handle auto table creation operation operation
  * Copyright:  (C) 2018,2019
  * Author:     Ojeyinka Philip Olaniyi
@@ -9,7 +9,7 @@
  ***/
 
 
-class Initial extends CI_Controller {
+class Install extends CI_Controller {
     function index()
     {
 
