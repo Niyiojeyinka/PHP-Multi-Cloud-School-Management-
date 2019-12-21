@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Gettew_prewebsettings extends CI_Controller {
+class Prewebsettings extends CI_Controller {
 
 public function __construct()
 {
@@ -89,7 +89,7 @@ $new_web = array(
 
 );
 $this->websites_model->insert_new_website($new_web);
-show_page("Gettew_prewebsettings_action/choose_theme/".$this->input->post('web_address')."".$this->input->post('web_name_o'));
+show_page("prewebsettings_action/choose_theme/".$this->input->post('web_address')."".$this->input->post('web_name_o'));
 
 }
 
@@ -110,7 +110,7 @@ show_page("Gettew_prewebsettings_action/choose_theme/".$this->input->post('web_a
     $data['themes'] = $this->websites_model->get_themes($offset,$limit);
       $this->load->library('pagination');
 
-    $config['base_url'] = site_url("gettew_Dashboard/choose_theme");
+    $config['base_url'] = site_url("dashboard/choose_theme");
 
 
 
@@ -174,7 +174,7 @@ show_page("Gettew_prewebsettings_action/choose_theme/".$this->input->post('web_a
     $data['themes']= $this->websites_model->search_themes($input_text,$limit,$offset);
       $this->load->library('pagination');
 
-    $config['base_url'] = site_url("Gettew_prewebsettings/search_themes");
+    $config['base_url'] = site_url("prewebsettings/search_themes");
 
   $config['total_rows'] = count($this->websites_model->search_themes($input_text,NULL,NULL));
 
