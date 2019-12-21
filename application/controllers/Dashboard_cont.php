@@ -1,7 +1,7 @@
 <?php
     defined('BASEPATH') OR exit('No direct script access allowed');
 
-    class Gettew_dashboard_cont extends CI_Controller {
+    class Dashboard_cont extends CI_Controller {
     /*
 
     Name:Gettew
@@ -45,7 +45,7 @@
 
       if(!empty($this->users_model->get_user_by_its_id($_SESSION['id'])['country']))
       {
-        show_page('Gettew_dashboard');
+        show_page('dashboard');
       }
 
 
@@ -79,7 +79,7 @@ $this->users_model->edit_user_location($loc);
 
 $_SESSION['action_status_report'] = "<span class='w3-text-green w3-center'>Location Saved Successfully</span><br>";
 $this->session->mark_as_flash('action_status_report');
-show_page('Gettew_dashboard/school_settings');
+show_page('dashboard/school_settings');
 
 }
 
@@ -264,7 +264,7 @@ unset($_SESSION['message']);
  $_SESSION['action_status_report'] = "<span class='w3-text-green'>Action Cancelled Successfully!</span>";
     $this->session->mark_as_flash('action_status_report');
 
-    show_page('Gettew_dashboard_cont/send_sms');
+    show_page('dashboard_cont/send_sms');
    
 
 }else{
@@ -333,7 +333,7 @@ $this->schools_model->edit_school(array("account_balance" => $school['account_ba
  unset($_SESSION['receivers']);
 unset($_SESSION['message']);
 
-    show_page('Gettew_dashboard_cont/post_send_sms');
+    show_page('dashboard_cont/post_send_sms');
 
 }
  
@@ -376,7 +376,7 @@ public function action($action,$object_type,$post_id,$action_ref)
     $this->blog_model->post_action($action,$post_id,$action_ref );
     $_SESSION['display_modal'] = true;
     $this->session->mark_as_flash("display_modal");
-show_page('Gettew_dashboard');
+show_page('dashboard');
 
   }elseif($object_type == "sms"){
 //send sms to sms part
@@ -388,13 +388,13 @@ if ($action == "approve"){
   array_push($_SESSION['receivers'], $receiver['phone']);
 $_SESSION['message']= $msg['message'];
 
-show_page('Gettew_dashboard_cont/process_sms');
+show_page('dashboard_cont/process_sms');
 }else{
 
 $this->blog_model->disapprove_sms($action_ref);
  $_SESSION['display_modal'] = true;
     $this->session->mark_as_flash("display_modal");
-    show_page('Gettew_dashboard');
+    show_page('dashboard');
 }
  }
 
@@ -458,13 +458,13 @@ $this->schools_model->insert_card_request(array('school_id'=> $_SESSION['school_
 $_SESSION['action_status_report'] = '<span class="w3-text-red">Account Balance is Low Please Fund Your Account <br>Click on fund account in the top left of this screen.</span>';
     $this->session->mark_as_flash('action_status_report');
 
-show_page('Gettew_dashboard_cont/generate_result_checker');
+show_page('dashboard_cont/generate_result_checker');
 
 }
     $_SESSION['action_status_report'] = '<span class="w3-text-green">Request Submitted Successfully <br>Our Agent Nearest To you will contact you as soon as possible<br>Thank You</span>';
     $this->session->mark_as_flash('action_status_report');
 
-show_page('Gettew_dashboard_cont/generate_result_checker');
+show_page('dashboard_cont/generate_result_checker');
 
 
 }
@@ -522,13 +522,13 @@ $this->schools_model->insert_idcard_request(array('school_id'=> $_SESSION['schoo
 $_SESSION['action_status_report'] = '<span class="w3-text-red">Account Balance is Low Please Fund Your Account <br>Click on fund account in the top left of this screen.</span>';
     $this->session->mark_as_flash('action_status_report');
 
-show_page('Gettew_dashboard_cont/idcard_request');
+show_page('dashboard_cont/idcard_request');
 
 }
     $_SESSION['action_status_report'] = '<span class="w3-text-green">Request Submitted Successfully <br>Our Agent Nearest To you will contact you as soon as possible<br>Thank You</span>';
     $this->session->mark_as_flash('action_status_report');
 
-show_page('Gettew_dashboard_cont/idcard_request');
+show_page('dashboard_cont/idcard_request');
 
 
 }

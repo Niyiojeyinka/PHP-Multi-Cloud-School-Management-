@@ -1,7 +1,7 @@
 <?php
     defined('BASEPATH') OR exit('No direct script access allowed');
 
-    class Gettew_dashboard extends CI_Controller {
+    class Dashboard extends CI_Controller {
     /*
     Name:Gettew
     Date:Start Rewriting  it on Oct 6, 2017 1:09:25 PM
@@ -28,7 +28,7 @@
 
 if (empty($this->users_model->get_user_by_id()['state']))
 {
-show_page('Gettew_dashboard_cont/choose_location');     
+show_page('dashboard_cont/choose_location');     
 
 }
 
@@ -136,13 +136,13 @@ $data['no_students'] = $this->students_model->get_no_of_students(array("school_i
 
 $_SESSION["action_status_report"] = '<b class="w3-text-green">Password Changed Successfully</b><br>';
 $this->session->mark_as_flash('action_status_report');
-  show_page("gettew_dashboard/change_password");
+  show_page("dashboard/change_password");
           }else{
 
              //error page
 $_SESSION["action_status_report"] = '<b class="w3-text-red">Error Occurred</b><br>';
 $this->session->mark_as_flash('action_status_report');
-  show_page("gettew_dashboard/change_password");
+  show_page("dashboard/change_password");
 
 
           }
@@ -151,7 +151,7 @@ $this->session->mark_as_flash('action_status_report');
  //incorrect password  error page
 $_SESSION["action_status_report"] = '<b class="w3-text-red">The Current Account Password you entered is incorrect</b><br>';
 $this->session->mark_as_flash('action_status_report');
-  show_page("gettew_dashboard/change_password");
+  show_page("dashboard/change_password");
                }
 }
 }
@@ -198,7 +198,7 @@ if($this->schools_model->check_subject_if_added($this->input->post('name')))
 
     $this->session->mark_as_flash('action_status_report');
 
-    show_page('Gettew_dashboard/manage_subject');
+    show_page('dashboard/manage_subject');
 
   }
 }
@@ -257,7 +257,7 @@ $this->schools_model->update_school_details($sch_db,$_SESSION['school_id']);
     $_SESSION['action_status_report'] = "<span class='w3-text-green'>School Details Updated Successfully!</span>";
     $this->session->mark_as_flash('action_status_report');
 
-    show_page('Gettew_dashboard/edit_school_details');
+    show_page('dashboard/edit_school_details');
 
 
 
@@ -329,7 +329,7 @@ $this->users_model->update_user_details($user_db,$_SESSION['id']);
     $_SESSION['action_status_report'] = "<span class='w3-text-green'>Details Updated Successfully!</span>";
     $this->session->mark_as_flash('action_status_report');
 
-    show_page('Gettew_dashboard/account_settings');
+    show_page('dashboard/account_settings');
 
     }
 
@@ -405,7 +405,7 @@ $this->users_model->update_user_details($user_db,$_SESSION['id']);
          $this->session->mark_as_flash('action_status_report');
 
       
-      show_page('Gettew_dashboard/edit_details');
+      show_page('dashboard/edit_details');
       
 
     }
@@ -516,7 +516,7 @@ $this->staff_model->insert_new_staff($staff_data);
  $_SESSION['action_status_report'] = "<span class='w3-text-green'>Staff Member Added Successfully!</span>";
     $this->session->mark_as_flash('action_status_report');
 
-    show_page('Gettew_dashboard/manage_staff');
+    show_page('dashboard/manage_staff');
    
     }
 
@@ -600,7 +600,7 @@ $data['payments'] = $this->students_model->get_payments($cond,$offset,$limit);
 
     $this->load->library('pagination');
 
-    $config['base_url'] = site_url("gettew_dashboard/payments");
+    $config['base_url'] = site_url("dashboard/payments");
 
 
 
@@ -789,13 +789,13 @@ unset($_SESSION['hold']);
 $_SESSION['action_status_report'] ="<span class='w3-text-green'>Payment Successfully Processed</span>";
 $this->session->mark_as_flash('action_status_report');
 
-show_page("gettew_dashboard/payments");
+show_page("dashboard/payments");
 
         } else {
             //Dont Give Value and return to Failure page
           $_SESSION['action_status_report'] ="<span class='w3-text-red'>Payment Failed</span>";
 $this->session->mark_as_flash('action_status_report');
-show_page("Gettew_dashboard/fund_account");
+show_page("dashboard/fund_account");
         }
     }
 
@@ -822,7 +822,7 @@ if (!$this->form_validation->run()) {
 
   $_SESSION['action_status_report'] = validation_errors();
   $this->session->mark_as_flash('action_status_report');
-  show_page('gettew_dashboard/payments');
+  show_page('dashboard/payments');
 }else{
 //get payments by student_id and school_id
   //set conditions based on what user want 
@@ -882,9 +882,9 @@ public function process_nav_search()
 
   if ($this->input->post("context") == "Staff") {
     
-    show_page("gettew_dashboard/search_staff");
+    show_page("dashboard/search_staff");
   }elseif($this->input->post("context") == "Students"){   
-    show_page("gettew_dashboard/search_students");
+    show_page("dashboard/search_students");
   }
 }
 
@@ -993,7 +993,7 @@ $this->schools_model->insert_sessions(json_encode($school_sessions),$school['id'
 
 $_SESSION['action_status_report'] = "<span class='w3-text-green'>Session Changed Successfully</span>";
 $this->session->mark_as_flash('action_status_report');
-show_page('Gettew_dashboard/change_session');
+show_page('dashboard/change_session');
 
 
   }
@@ -1049,7 +1049,7 @@ $this->schools_model->change_term($this->input->post('term'),$school['id']);
 
 $_SESSION['action_status_report'] = "<span class='w3-text-green'>Term Changed Successfully</span>";
 $this->session->mark_as_flash('action_status_report');
-show_page('Gettew_dashboard/change_term');
+show_page('dashboard/change_term');
 
 
   }
@@ -1072,13 +1072,13 @@ if ($this->form_validation->run()) {
 
 $_SESSION['action_status_report'] = "<span class='w3-text-green'>Student Optons Saved Successfully</span>";
   $this->session->mark_as_flash('action_status_report');
- show_page('gettew_dashboard/school_settings#options');
+ show_page('dashboard/school_settings#options');
 
 }else {
   $_SESSION['action_status_report'] = validation_errors();
   $this->session->mark_as_flash('action_status_report');
 
- show_page('gettew_dashboard/school_settings#options');
+ show_page('dashboard/school_settings#options');
 
 
 
@@ -1100,7 +1100,7 @@ $_SESSION['action_status_report'] = "<span class='w3-text-green'>Student Optons 
     $data['items'] = $this->staff_model->get_school_staff_members($cond,$limit,$offset);
       $this->load->library('pagination');
 
-    $config['base_url'] = site_url("gettew_dashboard/view_staff_list");
+    $config['base_url'] = site_url("dashboard/view_staff_list");
 
 
 
@@ -1202,7 +1202,7 @@ $this->schools_model->edit_school(array(
 //return;
 $_SESSION['action_status_report'] = "<span class='w3-text-green'>Result Settings Changed Successfully</span>";
 $this->session->mark_as_flash('action_status_report');
-show_page('Gettew_dashboard/result_settings');
+show_page('dashboard/result_settings');
 
 
   }
@@ -1221,7 +1221,7 @@ show_page('Gettew_dashboard/result_settings');
     $data['items'] = $this->students_model->get_school_students($cond,$limit,$offset);
       $this->load->library('pagination');
 
-    $config['base_url'] = site_url("gettew_dashboard/view_students_list");
+    $config['base_url'] = site_url("dashboard/view_students_list");
 
 
 
@@ -1325,7 +1325,7 @@ if(!$this->form_validation->run())
 {
 $_SESSION['action_status_report'] = "<span class='w3-text-red'>".validation_errors()."</span>";
 $this->session->mark_as_flash('action_status_report');
-show_page('Gettew_dashboard/school_settings');
+show_page('dashboard/school_settings');
 
 
 }else{
@@ -1348,7 +1348,7 @@ $this->schools_model->insert_level($lev);
 
 $_SESSION['action_status_report'] = "<span class='w3-text-green'>School Level Added Successfully</span><br>";
 $this->session->mark_as_flash('action_status_report');
-show_page('Gettew_dashboard/school_settings');
+show_page('dashboard/school_settings');
 
 
 
@@ -1419,7 +1419,7 @@ if(empty($search_dup))
 
 $_SESSION['action_status_report'] = "<span class='w3-text-green'>FEE Added Successfully</span><br>";
 $this->session->mark_as_flash('action_status_report');
-show_page('Gettew_dashboard/manage_fee');
+show_page('dashboard/manage_fee');
 }
 
 
@@ -1438,7 +1438,7 @@ if(!$this->form_validation->run())
 {
 $_SESSION['action_status_report'] = "<span class='w3-text-red'>".validation_errors()."</span>";
 $this->session->mark_as_flash('action_status_report');
-show_page('Gettew_dashboard/school_settings#division');
+show_page('dashboard/school_settings#division');
 
 
 }else{
@@ -1467,7 +1467,7 @@ $this->schools_model->edit_session_division($divi,$school_id);
 
 $_SESSION['action_status_report'] = "<span class='w3-text-green'>School Session Division Added Successfully</span><br>";
 $this->session->mark_as_flash('action_status_report');
-show_page('Gettew_dashboard/school_settings');
+show_page('dashboard/school_settings');
 
 
 
@@ -1646,7 +1646,7 @@ $stud = array(
 $this->students_model->save_new_student($stud);
 
 
-show_page('Gettew_dashboard/student_details/'.$ref_id);
+show_page('dashboard/student_details/'.$ref_id);
 }
 }
 
@@ -1658,7 +1658,7 @@ show_page('Gettew_dashboard/student_details/'.$ref_id);
     $data['items']= $this->students_model->search_students($input_text,$limit,$offset);
       $this->load->library('pagination');
 
-    $config['base_url'] = site_url("Gettew_dashboard/search_students");
+    $config['base_url'] = site_url("dashboard/search_students");
 
 
 
@@ -1749,7 +1749,7 @@ $this->schools_model->make_new_cbt_request($request);
     $this->session->mark_as_flash('action_status_report');
 
 
-     show_page('gettew_dashboard/cbt_application_form');
+     show_page('dashboard/cbt_application_form');
 
 
 }
@@ -1764,7 +1764,7 @@ $input_text = $this->input->post('search');
     $data['items'] = $this->staff_model->search_staff($input_text,$limit,$offset);
       $this->load->library('pagination');
 
-    $config['base_url'] = site_url("Gettew_dashboard/search_staff");
+    $config['base_url'] = site_url("dashboard/search_staff");
 
 
 
@@ -1837,7 +1837,7 @@ $report = "<span class='w3-text-green w3-large'>Student Promoted To <span class=
     $_SESSION['action_status_report'] = $report;
     $this->session->mark_as_flash('action_status_report');
 
-    show_page('Gettew_dashboard/student_details/'.$reg_no);
+    show_page('dashboard/student_details/'.$reg_no);
 
 
 
@@ -1864,7 +1864,7 @@ $report = "<span class='w3-text-green w3-large'>Student Demoted To <span class='
     $_SESSION['action_status_report'] = $report;
     $this->session->mark_as_flash('action_status_report');
 
-    show_page('Gettew_dashboard/student_details/'.$reg_no);
+    show_page('dashboard/student_details/'.$reg_no);
 
 
 
@@ -2019,7 +2019,7 @@ public function set_fee_option()
 $this->schools_model->set_fee_option();
  $_SESSION['action_status_report'] = '<span class="w3-text-green">FEE option saved Successfully</span><br>';
     $this->session->mark_as_flash('action_status_report');
-     show_page('gettew_dashboard/school_settings');
+     show_page('dashboard/school_settings');
 }
 
 
@@ -2107,7 +2107,7 @@ $this->schools_model->insert_student_payment($offline_payment);
 
 $_SESSION['action_status_report'] = '<span class="w3-text-green">Offline Payment added Successfully</span><br>';
     $this->session->mark_as_flash('action_status_report');
-     show_page('gettew_dashboard/add_offline_payment');
+     show_page('dashboard/add_offline_payment');
 
 }
 }
@@ -2118,7 +2118,7 @@ $school = $this->schools_model->get_school_by_id($_SESSION['school_id']);
 
 //check if not expire and already upgraded
 if (($school['license'] == "active" && time() < $school['license_expire']) || ($school['license'] == "active" && time() > $school['license_expire'])){
-  show_page('gettew_dashboard/renew_account');
+  show_page('dashboard/renew_account');
 }
 
   //check if not a new customer and redirect to renewal page
@@ -2188,7 +2188,7 @@ return;
 $_SESSION['action_status_report'] = "<span class='w3-text-red w3-center'>Insufficient Balance</span><br>";
 }
 $this->session->mark_as_flash('action_status_report');
-show_page('Gettew_dashboard/upgrade_account');
+show_page('dashboard/upgrade_account');
 
 
     
@@ -2205,7 +2205,7 @@ $school = $this->schools_model->get_school_by_id($_SESSION['school_id']);
 
 //check if not expire and already upgraded
 if ($school['license'] == "trial"){
-  show_page('gettew_dashboard/upgrade_account');
+  show_page('dashboard/upgrade_account');
 }
 
   //check if  a new customer and redirect to upgrade page
@@ -2279,7 +2279,7 @@ return;
 $_SESSION['action_status_report'] = "<span class='w3-text-red w3-center'>Insufficient Balance</span><br>";
 }
 $this->session->mark_as_flash('action_status_report');
-show_page('Gettew_dashboard/renew_account');
+show_page('dashboard/renew_account');
 
 
     
