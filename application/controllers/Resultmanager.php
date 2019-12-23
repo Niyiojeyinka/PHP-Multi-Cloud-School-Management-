@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Gettew_resultmanager extends CI_Controller {
+class Resultmanager extends CI_Controller {
 
 public function __construct()
 {
