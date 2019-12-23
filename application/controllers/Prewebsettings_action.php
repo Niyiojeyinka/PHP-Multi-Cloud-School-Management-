@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Gettew_prewebsettings_action extends CI_Controller {
+class Prewebsettings_action extends CI_Controller {
 
 public function __construct()
 {
@@ -33,7 +33,7 @@ public function __construct()
     $data['themes'] = $this->websites_model->get_themes($offset,$limit);
       $this->load->library('pagination');
 
-    $config['base_url'] = site_url("Gettew_prewebsettings_action/choose_theme");
+    $config['base_url'] = site_url("prewebsettings_action/choose_theme");
   $config['total_rows'] = count($this->websites_model->get_themes(NULL,NULL));
     $config['per_page'] = $limit;
    //$config['uri_segment'] = 4;
@@ -69,7 +69,7 @@ public function __construct()
           $this->load->view('users/admin/common/nav_view',$data);
           $this->load->view('users/admin/common/sidebar_view',$data);
           $this->load->view('users/admin/common/content_top_view',$data);
-          $this->load->view('users/admin/web/gettew_admin_choose_theme_view',$data);
+          $this->load->view('users/admin/web/admin_choose_theme_view',$data);
           $this->load->view('common/footer_view',$data);
 }
 
@@ -89,7 +89,7 @@ $data['theme'] = $this->websites_model->get_theme_by_id($theme_id);
           $this->load->view('users/admin/common/nav_view',$data);
           $this->load->view('users/admin/common/sidebar_view',$data);
           $this->load->view('users/admin/common/content_top_view',$data);
-          $this->load->view('users/admin/web/gettew_admin_theme_details_view',$data);
+          $this->load->view('users/admin/web/admin_theme_details_view',$data);
           $this->load->view('common/footer_view',$data);
 
 
@@ -110,7 +110,7 @@ $theme_data = array(
 $this->websites_model->install_theme($theme_data,$subdomain);
 
 
-show_page("Gettew_prewebsettings_action/theme_settings/".$this->uri->segment(4));
+show_page("prewebsettings_action/theme_settings/".$this->uri->segment(4));
 
   }
 
@@ -133,7 +133,7 @@ $theme_id = $this->websites_model->get_web_theme($cond)['theme_id'];
 $data['school_web'] = $this->websites_model->get_school_website($cond);
 
 $theme = $this->websites_model->get_theme_by_id($theme_id);
-$data["gettew_options"]  = json_decode($theme['feature_support'],true);
+$data["options"]  = json_decode($theme['feature_support'],true);
 
 $data['theme_options'] = json_decode($theme['admin_options'],true);
 //load theme settings here
@@ -219,7 +219,7 @@ if(!empty($image_slug))
         $this->session->mark_as_temp('action_status_report',2);
  }
 
-        show_page("gettew_prewebsettings_action/theme_settings/".$subdomain."/".$this->input->post('slug'));
+        show_page("prewebsettings_action/theme_settings/".$subdomain."/".$this->input->post('slug'));
 
 
 }else{
@@ -246,7 +246,7 @@ if(!empty($image_slug))
         $this->session->mark_as_temp('action_status_report',2);
 
 
-        show_page("gettew_prewebsettings_action/theme_settings/".$subdomain."/".$this->input->post('slug'));
+        show_page("prewebsettings_action/theme_settings/".$subdomain."/".$this->input->post('slug'));
 
 }
 
