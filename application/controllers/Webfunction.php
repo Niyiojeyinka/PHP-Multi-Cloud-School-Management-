@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Gettew_webfunction extends CI_Controller {
+class Webfunction extends CI_Controller {
 
 public function __construct()
 {
@@ -42,7 +42,7 @@ $cond = array(
 $theme_id = $this->websites_model->get_web_theme($cond)['theme_id'];
 
 $theme = $this->websites_model->get_theme_by_id($theme_id);
-$data["gettew_options"]  = json_decode($theme['feature_support'],true);
+$data["options"]  = json_decode($theme['feature_support'],true);
 
 $data['theme_options'] = json_decode($theme['admin_options'],true);
 //load theme settings here
@@ -71,7 +71,7 @@ $up = 1;
     $this->load->view('users/admin/common/nav_view',$data);
    $this->load->view('users/admin/common/web_sidebar_view',$data);
     $this->load->view('users/admin/common/content_top_view',$data);
-    $this->load->view('users/admin/web/gettew_add_news_view',$data);
+    $this->load->view('users/admin/web/add_news_view',$data);
         $this->load->view('users/admin/common/media_sidebar_view',$data);
     $this->load->view('common/footer_view',$data);
 
@@ -87,7 +87,7 @@ $this->session->mark_as_flash('action_status_report');
 
       $slg = url_title($this->input->post('title'),"dash",TRUE);
 
-  show_page("Gettew_webfunction/edit_news/".$this->uri->segment(3)."/".$slg);
+  show_page("webfunction/edit_news/".$this->uri->segment(3)."/".$slg);
 
   }else{
   //error page
@@ -95,7 +95,7 @@ $this->session->mark_as_flash('action_status_report');
   </span>";
   $this->session->mark_as_flash('action_status_report');
 
-  show_page("Gettew_webfunction/add_news/".$this->uri->segment(3));
+  show_page("webfunction/add_news/".$this->uri->segment(3));
 
   }
 
@@ -122,7 +122,7 @@ $cond = array(
 $theme_id = $this->websites_model->get_web_theme($cond)['theme_id'];
 
 $theme = $this->websites_model->get_theme_by_id($theme_id);
-$data["gettew_options"]  = json_decode($theme['feature_support'],true);
+$data["options"]  = json_decode($theme['feature_support'],true);
 
 $data['theme_options'] = json_decode($theme['admin_options'],true);
 //load theme settings here
@@ -139,7 +139,7 @@ $data['theme_options'] = json_decode($theme['admin_options'],true);
     $this->load->view('users/admin/common/nav_view',$data);
    $this->load->view('users/admin/common/web_sidebar_view',$data);
     $this->load->view('users/admin/common/content_top_view',$data);
-    $this->load->view('users/admin/web/gettew_add_event_view',$data);
+    $this->load->view('users/admin/web/add_event_view',$data);
         $this->load->view('users/admin/common/media_sidebar_view',$data);
     $this->load->view('common/footer_view',$data);
 
@@ -171,7 +171,7 @@ $ref =md5(time()/2.1);
 $this->session->mark_as_flash('action_status_report');
 
 
-  show_page("Gettew_webfunction/edit_event/".$this->uri->segment(3)."/".$ref);
+  show_page("webfunction/edit_event/".$this->uri->segment(3)."/".$ref);
 
   }else{
   //error page
@@ -179,7 +179,7 @@ $this->session->mark_as_flash('action_status_report');
   </span>";
   $this->session->mark_as_flash('action_status_report');
 
-  show_page("Gettew_webfunction/add_event/".$this->uri->segment(3));
+  show_page("webfunction/add_event/".$this->uri->segment(3));
 
   }
 
@@ -204,7 +204,7 @@ $cond = array(
 $theme_id = $this->websites_model->get_web_theme($cond)['theme_id'];
 
 $theme = $this->websites_model->get_theme_by_id($theme_id);
-$data["gettew_options"]  = json_decode($theme['feature_support'],true);
+$data["options"]  = json_decode($theme['feature_support'],true);
 
 $data['theme_options'] = json_decode($theme['admin_options'],true);
 //load theme settings here
@@ -222,7 +222,7 @@ if(empty($data['item']))
     $this->load->view('users/admin/common/nav_view',$data);
    $this->load->view('users/admin/common/web_sidebar_view',$data);
     $this->load->view('users/admin/common/content_top_view',$data);
-    $this->load->view('users/admin/web/gettew_preview_news_view',$data);
+    $this->load->view('users/admin/web/preview_news_view',$data);
        // $this->load->view('users/admin/common/media_sidebar_view',$data);
     $this->load->view('common/footer_view',$data);
 }
@@ -244,7 +244,7 @@ $cond = array(
 $theme_id = $this->websites_model->get_web_theme($cond)['theme_id'];
 
 $theme = $this->websites_model->get_theme_by_id($theme_id);
-$data["gettew_options"]  = json_decode($theme['feature_support'],true);
+$data["options"]  = json_decode($theme['feature_support'],true);
 
 $data['theme_options'] = json_decode($theme['admin_options'],true);
 //load theme settings here
@@ -283,7 +283,7 @@ if(empty($data['item']))
     $this->load->view('users/admin/common/nav_view',$data);
    $this->load->view('users/admin/common/web_sidebar_view',$data);
     $this->load->view('users/admin/common/content_top_view',$data);
-    $this->load->view('users/admin/web/gettew_edit_news_view',$data);
+    $this->load->view('users/admin/web/edit_news_view',$data);
         $this->load->view('users/admin/common/media_sidebar_view',$data);
     $this->load->view('common/footer_view',$data);
 
@@ -308,7 +308,7 @@ if(empty($data['item']))
 $this->session->mark_as_flash('action_status_report');
 
   
-  show_page("Gettew_webfunction/edit_news/".$this->uri->segment(3)."/".$slug);
+  show_page("webfunction/edit_news/".$this->uri->segment(3)."/".$slug);
 
   }else{
   //error page
@@ -316,7 +316,7 @@ $this->session->mark_as_flash('action_status_report');
   </span>";
   $this->session->mark_as_flash('action_status_report');
 
-  show_page("Gettew_webfunction/edit_news/".$this->uri->segment(3)."/".$slug);
+  show_page("webfunction/edit_news/".$this->uri->segment(3)."/".$slug);
 
   }
 
@@ -341,7 +341,7 @@ $cond = array(
 $theme_id = $this->websites_model->get_web_theme($cond)['theme_id'];
 
 $theme = $this->websites_model->get_theme_by_id($theme_id);
-$data["gettew_options"]  = json_decode($theme['feature_support'],true);
+$data["options"]  = json_decode($theme['feature_support'],true);
 
 $data['theme_options'] = json_decode($theme['admin_options'],true);
 //load theme settings here
@@ -367,7 +367,7 @@ if(empty($data['event']))
     $this->load->view('users/admin/common/nav_view',$data);
    $this->load->view('users/admin/common/web_sidebar_view',$data);
     $this->load->view('users/admin/common/content_top_view',$data);
-    $this->load->view('users/admin/web/gettew_edit_event_view',$data);
+    $this->load->view('users/admin/web/edit_event_view',$data);
         $this->load->view('users/admin/common/media_sidebar_view',$data);
     $this->load->view('common/footer_view',$data);
 
@@ -391,7 +391,7 @@ if(empty($data['event']))
 $this->session->mark_as_flash('action_status_report');
 
   
-  show_page("Gettew_webfunction/edit_event/".$this->uri->segment(3)."/".$ref);
+  show_page("webfunction/edit_event/".$this->uri->segment(3)."/".$ref);
 
   }else{
   //error page
@@ -399,7 +399,7 @@ $this->session->mark_as_flash('action_status_report');
   </span>";
   $this->session->mark_as_flash('action_status_report');
 
-  show_page("Gettew_webfunction/edit_event/".$this->uri->segment(3)."/".$ref);
+  show_page("webfunction/edit_event/".$this->uri->segment(3)."/".$ref);
 
   }
 
@@ -438,25 +438,25 @@ $this->session->mark_as_flash('action_status_report');
 
   if($item_type == "news")
   {
-  show_page("Gettew_webfunction/manage_news/".$this->uri->segment(3));
+  show_page("webfunction/manage_news/".$this->uri->segment(3));
 
   }elseif($item_type == "page"){
-  show_page("Gettew_webfunction/manage_pages/".$this->uri->segment(3));
+  show_page("webfunction/manage_pages/".$this->uri->segment(3));
 
 
   }elseif ($item_type == "media") {
-    show_page("Gettew_webfunction/manage_media/".$this->uri->segment(3));
+    show_page("webfunction/manage_media/".$this->uri->segment(3));
   }
 elseif ($item_type == "subject") {
-    show_page("Gettew_dashboard/manage_subject");
+    show_page("dashboard/manage_subject");
   }elseif ($item_type == "fee") {
-    show_page("Gettew_dashboard/manage_fee");
+    show_page("dashboard/manage_fee");
   }elseif ($item_type == "staff") {
-    show_page("Gettew_dashboard/view_staff_list");
+    show_page("dashboard/view_staff_list");
   }elseif ($item_type == "event") {
-    show_page("Gettew_webfunction/manage_events/".$this->uri->segment(3));
+    show_page("webfunction/manage_events/".$this->uri->segment(3));
   }elseif ($item_type == "slider") {
-    show_page("Gettew_webfunction/manage_sliders/".$this->uri->segment(3));
+    show_page("webfunction/manage_sliders/".$this->uri->segment(3));
   }
 
 }
@@ -481,7 +481,7 @@ $cond = array(
 $theme_id = $this->websites_model->get_web_theme($cond)['theme_id'];
 
 $theme = $this->websites_model->get_theme_by_id($theme_id);
-$data["gettew_options"]  = json_decode($theme['feature_support'],true);
+$data["options"]  = json_decode($theme['feature_support'],true);
 
 $data['theme_options'] = json_decode($theme['admin_options'],true);
 //load theme settings here
@@ -493,7 +493,7 @@ $data['theme_options'] = json_decode($theme['admin_options'],true);
     $this->load->view('users/admin/common/nav_view',$data);
    //$this->load->view('users/admin/common/web_sidebar_view',$data);
    // $this->load->view('users/admin/common/content_top_view',$data);
-    $this->load->view('users/admin/web/gettew_action_confirmation_view',$data);
+    $this->load->view('users/admin/web/action_confirmation_view',$data);
     $this->load->view('common/footer_view',$data);
 
 }
@@ -515,7 +515,7 @@ $cond = array(
 $theme_id = $this->websites_model->get_web_theme($cond)['theme_id'];
 
 $theme = $this->websites_model->get_theme_by_id($theme_id);
-$data["gettew_options"]  = json_decode($theme['feature_support'],true);
+$data["options"]  = json_decode($theme['feature_support'],true);
 
 $data['theme_options'] = json_decode($theme['admin_options'],true);
 //load theme settings here
@@ -534,7 +534,7 @@ $data['theme_options'] = json_decode($theme['admin_options'],true);
     $this->load->view('users/admin/common/nav_view',$data);
    $this->load->view('users/admin/common/web_sidebar_view',$data);
     $this->load->view('users/admin/common/content_top_view',$data);
-    $this->load->view('users/admin/web/gettew_add_page_view',$data);
+    $this->load->view('users/admin/web/add_page_view',$data);
       $this->load->view('users/admin/common/media_sidebar_view',$data);
     $this->load->view('common/footer_view',$data);
 
@@ -549,7 +549,7 @@ $data['theme_options'] = json_decode($theme['admin_options'],true);
 $this->session->mark_as_flash('action_status_report');
 
   
-  show_page("Gettew_webfunction/add_page/".$this->uri->segment(3));
+  show_page("webfunction/add_page/".$this->uri->segment(3));
 
   }else{
   //error page
@@ -557,7 +557,7 @@ $this->session->mark_as_flash('action_status_report');
   </span>";
   $this->session->mark_as_flash('action_status_report');
 
-  show_page("Gettew_webfunction/add_page/".$this->uri->segment(3));
+  show_page("webfunction/add_page/".$this->uri->segment(3));
 
   }
 
@@ -595,7 +595,7 @@ $cond = array(
 $theme_id = $this->websites_model->get_web_theme($cond)['theme_id'];
 
 $theme = $this->websites_model->get_theme_by_id($theme_id);
-$data["gettew_options"]  = json_decode($theme['feature_support'],true);
+$data["options"]  = json_decode($theme['feature_support'],true);
 
 $data['theme_options'] = json_decode($theme['admin_options'],true);
 //load theme settings here
@@ -604,7 +604,7 @@ $data['theme_options'] = json_decode($theme['admin_options'],true);
     $this->load->view('users/admin/common/nav_view',$data);
    $this->load->view('users/admin/common/web_sidebar_view',$data);
     $this->load->view('users/admin/common/content_top_view',$data);
-    $this->load->view('users/admin/web/gettew_add_favicon_view',$data);
+    $this->load->view('users/admin/web/add_favicon_view',$data);
     $this->load->view('common/footer_view',$data);
 
 
@@ -618,7 +618,7 @@ $this->websites_model->save_favicon($image);
 
 $_SESSION['action_status_report']= "<span class='w3-text-green'>Action successfull</span>";
 $this->session->mark_as_flash('action_status_report');
-show_page('Gettew_webfunction/change_favicon/'.$address_id);
+show_page('webfunction/change_favicon/'.$address_id);
 }
 }
 public function add_media($address_id =NULL)
@@ -635,7 +635,7 @@ $cond = array(
 $theme_id = $this->websites_model->get_web_theme($cond)['theme_id'];
 
 $theme = $this->websites_model->get_theme_by_id($theme_id);
-$data["gettew_options"]  = json_decode($theme['feature_support'],true);
+$data["options"]  = json_decode($theme['feature_support'],true);
 
 $data['theme_options'] = json_decode($theme['admin_options'],true);
 //load theme settings here
@@ -660,7 +660,7 @@ $data['theme_options'] = json_decode($theme['admin_options'],true);
     $this->load->view('users/admin/common/nav_view',$data);
    $this->load->view('users/admin/common/web_sidebar_view',$data);
     $this->load->view('users/admin/common/content_top_view',$data);
-    $this->load->view('users/admin/web/gettew_add_media_view',$data);
+    $this->load->view('users/admin/web/add_media_view',$data);
       $this->load->view('users/admin/common/media_sidebar_view',$data);
     $this->load->view('common/footer_view',$data);
 
@@ -685,7 +685,7 @@ $db_data = array('name'=> $this->input->post('title'),
 $this->session->mark_as_flash('action_status_report');
 
   
-  show_page("Gettew_webfunction/add_media/".$this->uri->segment(3));
+  show_page("webfunction/add_media/".$this->uri->segment(3));
 
   }else{
   //error page
@@ -693,7 +693,7 @@ $this->session->mark_as_flash('action_status_report');
   </span>";
   $this->session->mark_as_flash('action_status_report');
 
-  show_page("Gettew_webfunction/add_media/".$this->uri->segment(3));
+  show_page("webfunction/add_media/".$this->uri->segment(3));
 
   }
 
@@ -712,7 +712,7 @@ public function manage_sliders($address_id =NULL,$offset = 0)
 
       $this->load->library('pagination');
 
-      $config['base_url'] = site_url("Gettew_webfunction/manage_events/".$address_id);
+      $config['base_url'] = site_url("webfunction/manage_events/".$address_id);
 
     $config['total_rows'] = count($this->websites_model->get_multiple_slider(NULL,
     NULL,$address_id));
@@ -760,7 +760,7 @@ $cond = array(
 $theme_id = $this->websites_model->get_web_theme($cond)['theme_id'];
 
 $theme = $this->websites_model->get_theme_by_id($theme_id);
-$data["gettew_options"]  = json_decode($theme['feature_support'],true);
+$data["options"]  = json_decode($theme['feature_support'],true);
 
 $data['theme_options'] = json_decode($theme['admin_options'],true);
 //load theme settings here
@@ -772,7 +772,7 @@ $data['theme_options'] = json_decode($theme['admin_options'],true);
     $this->load->view('users/admin/common/nav_view',$data);
    $this->load->view('users/admin/common/web_sidebar_view',$data);
     $this->load->view('users/admin/common/content_top_view',$data);
-    $this->load->view('users/admin/web/gettew_manage_sliders_view',$data);
+    $this->load->view('users/admin/web/manage_sliders_view',$data);
     $this->load->view('common/footer_view',$data);
 }
 
@@ -794,7 +794,7 @@ $cond = array(
 $theme_id = $this->websites_model->get_web_theme($cond)['theme_id'];
 
 $theme = $this->websites_model->get_theme_by_id($theme_id);
-$data["gettew_options"]  = json_decode($theme['feature_support'],true);
+$data["options"]  = json_decode($theme['feature_support'],true);
 
 $data['theme_options'] = json_decode($theme['admin_options'],true);
 //load theme settings here
@@ -818,7 +818,7 @@ $data['theme_options'] = json_decode($theme['admin_options'],true);
     $this->load->view('users/admin/common/nav_view',$data);
    $this->load->view('users/admin/common/web_sidebar_view',$data);
     $this->load->view('users/admin/common/content_top_view',$data);
-    $this->load->view('users/admin/web/gettew_add_slider_view',$data);
+    $this->load->view('users/admin/web/add_slider_view',$data);
       $this->load->view('users/admin/common/media_sidebar_view',$data);
     $this->load->view('common/footer_view',$data);
 
@@ -850,7 +850,7 @@ $slider = array(
 $this->session->mark_as_flash('action_status_report');
 
   
-  show_page("Gettew_webfunction/add_slider/".$this->uri->segment(3));
+  show_page("webfunction/add_slider/".$this->uri->segment(3));
 
   }else{
   //error page
@@ -858,7 +858,7 @@ $this->session->mark_as_flash('action_status_report');
   </span>";
   $this->session->mark_as_flash('action_status_report');
 
-  show_page("Gettew_webfunction/add_slider/".$this->uri->segment(3));
+  show_page("webfunction/add_slider/".$this->uri->segment(3));
 
   }
 
@@ -884,7 +884,7 @@ $cond = array(
 $theme_id = $this->websites_model->get_web_theme($cond)['theme_id'];
 
 $theme = $this->websites_model->get_theme_by_id($theme_id);
-$data["gettew_options"]  = json_decode($theme['feature_support'],true);
+$data["options"]  = json_decode($theme['feature_support'],true);
 
 $data['theme_options'] = json_decode($theme['admin_options'],true);
 //load theme settings here
@@ -904,7 +904,7 @@ $data['item'] = $this->blog_model->get_page_by_slug($slug);
     $this->load->view('users/admin/common/nav_view',$data);
    $this->load->view('users/admin/common/web_sidebar_view',$data);
     $this->load->view('users/admin/common/content_top_view',$data);
-    $this->load->view('users/admin/web/gettew_edit_page_view',$data);
+    $this->load->view('users/admin/web/edit_page_view',$data);
       $this->load->view('users/admin/common/media_sidebar_view',$data);
     $this->load->view('common/footer_view',$data);
 
@@ -919,7 +919,7 @@ $data['item'] = $this->blog_model->get_page_by_slug($slug);
 $this->session->mark_as_flash('action_status_report');
 
   
-  show_page("Gettew_webfunction/edit_page/".$this->uri->segment(3)."/".$slug);
+  show_page("webfunction/edit_page/".$this->uri->segment(3)."/".$slug);
 
   }else{
   //error page
@@ -927,7 +927,7 @@ $this->session->mark_as_flash('action_status_report');
   </span>";
   $this->session->mark_as_flash('action_status_report');
 
-  show_page("Gettew_webfunction/edit_page/".$this->uri->segment(3)."/".$slug);
+  show_page("webfunction/edit_page/".$this->uri->segment(3)."/".$slug);
 
   }
 
@@ -949,7 +949,7 @@ public function manage_news($address_id =NULL,$offset = 0)
 
       $this->load->library('pagination');
 
-      $config['base_url'] = site_url("Gettew_webfunction/manage_news/".$address_id);
+      $config['base_url'] = site_url("webfunction/manage_news/".$address_id);
 
     $config['total_rows'] = count($this->blog_model->get_multiple_news(NULL,
     NULL,$address_id));
@@ -998,7 +998,7 @@ $cond = array(
 $theme_id = $this->websites_model->get_web_theme($cond)['theme_id'];
 
 $theme = $this->websites_model->get_theme_by_id($theme_id);
-$data["gettew_options"]  = json_decode($theme['feature_support'],true);
+$data["options"]  = json_decode($theme['feature_support'],true);
 
 $data['theme_options'] = json_decode($theme['admin_options'],true);
 //load theme settings here
@@ -1010,7 +1010,7 @@ $data['theme_options'] = json_decode($theme['admin_options'],true);
     $this->load->view('users/admin/common/nav_view',$data);
    $this->load->view('users/admin/common/web_sidebar_view',$data);
     $this->load->view('users/admin/common/content_top_view',$data);
-    $this->load->view('users/admin/web/gettew_manage_news_view',$data);
+    $this->load->view('users/admin/web/manage_news_view',$data);
     $this->load->view('common/footer_view',$data);
 
 
@@ -1029,7 +1029,7 @@ public function manage_events($address_id =NULL,$offset = 0)
 
       $this->load->library('pagination');
 
-      $config['base_url'] = site_url("Gettew_webfunction/manage_events/".$address_id);
+      $config['base_url'] = site_url("webfunction/manage_events/".$address_id);
 
     $config['total_rows'] = count($this->websites_model->get_multiple_events(NULL,
     NULL,$address_id));
@@ -1079,7 +1079,7 @@ $cond = array(
 $theme_id = $this->websites_model->get_web_theme($cond)['theme_id'];
 
 $theme = $this->websites_model->get_theme_by_id($theme_id);
-$data["gettew_options"]  = json_decode($theme['feature_support'],true);
+$data["options"]  = json_decode($theme['feature_support'],true);
 
 $data['theme_options'] = json_decode($theme['admin_options'],true);
 //load theme settings here
@@ -1091,7 +1091,7 @@ $data['theme_options'] = json_decode($theme['admin_options'],true);
     $this->load->view('users/admin/common/nav_view',$data);
    $this->load->view('users/admin/common/web_sidebar_view',$data);
     $this->load->view('users/admin/common/content_top_view',$data);
-    $this->load->view('users/admin/web/gettew_manage_events_view',$data);
+    $this->load->view('users/admin/web/manage_events_view',$data);
     $this->load->view('common/footer_view',$data);
 
 
@@ -1110,7 +1110,7 @@ public function manage_media($address_id =NULL,$offset = 0)
 
       $this->load->library('pagination');
 
-      $config['base_url'] = site_url("Gettew_webfunction/manage_media/".$address_id);
+      $config['base_url'] = site_url("webfunction/manage_media/".$address_id);
 
     $config['total_rows'] = count($this->media_model->get_media_contents(NULL,
     NULL,$address_id));
@@ -1158,7 +1158,7 @@ $cond = array(
 $theme_id = $this->websites_model->get_web_theme($cond)['theme_id'];
 
 $theme = $this->websites_model->get_theme_by_id($theme_id);
-$data["gettew_options"]  = json_decode($theme['feature_support'],true);
+$data["options"]  = json_decode($theme['feature_support'],true);
 
 $data['theme_options'] = json_decode($theme['admin_options'],true);
 //load theme settings here
@@ -1170,7 +1170,7 @@ $data['theme_options'] = json_decode($theme['admin_options'],true);
     $this->load->view('users/admin/common/nav_view',$data);
     $this->load->view('users/admin/common/web_sidebar_view',$data);
     $this->load->view('users/admin/common/content_top_view',$data);
-    $this->load->view('users/admin/web/gettew_manage_media_view',$data);
+    $this->load->view('users/admin/web/manage_media_view',$data);
     $this->load->view('common/footer_view',$data);
 
 }
@@ -1183,7 +1183,7 @@ public function manage_pages($address_id =NULL,$offset = 0)
 
       $this->load->library('pagination');
 
-      $config['base_url'] = site_url("Gettew_webfunction/manage_pages/".$address_id);
+      $config['base_url'] = site_url("webfunction/manage_pages/".$address_id);
 
     $config['total_rows'] = count($this->blog_model->get_multiple_pages(NULL,
     NULL,$address_id));
@@ -1234,7 +1234,7 @@ $cond = array(
 $theme_id = $this->websites_model->get_web_theme($cond)['theme_id'];
 
 $theme = $this->websites_model->get_theme_by_id($theme_id);
-$data["gettew_options"]  = json_decode($theme['feature_support'],true);
+$data["options"]  = json_decode($theme['feature_support'],true);
 
 $data['theme_options'] = json_decode($theme['admin_options'],true);
 //load theme settings here
@@ -1246,7 +1246,7 @@ $data['theme_options'] = json_decode($theme['admin_options'],true);
     $this->load->view('users/admin/common/nav_view',$data);
    $this->load->view('users/admin/common/web_sidebar_view',$data);
     $this->load->view('users/admin/common/content_top_view',$data);
-    $this->load->view('users/admin/web/gettew_manage_pages_view',$data);
+    $this->load->view('users/admin/web/manage_pages_view',$data);
     $this->load->view('common/footer_view',$data);
 
 
