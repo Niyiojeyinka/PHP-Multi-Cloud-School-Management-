@@ -50,4 +50,4 @@ PHP 5.6+,MSQL 5+
 
 <b>NOTICE : </b>This project was urgently needed when it was written and was not originally plan to be open source so work is still going on it to suit the new goal
 
-<b>On Development</b>
+<b>On Development: Currently heavily buggy</b>
