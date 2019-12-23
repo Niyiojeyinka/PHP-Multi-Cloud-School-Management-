@@ -67,7 +67,7 @@ if(!$this->form_validation->run())
           $this->load->view('users/admin/common/nav_view',$data);
           $this->load->view('users/admin/common/sidebar_view',$data);
           $this->load->view('users/admin/common/content_top_view',$data);
-          $this->load->view('users/admin/web/gettew_admin_website_view',$data);
+          $this->load->view('users/admin/web/admin_website_view',$data);
           $this->load->view('common/footer_view',$data);
 
 
@@ -157,7 +157,7 @@ show_page("prewebsettings_action/choose_theme/".$this->input->post('web_address'
           $this->load->view('users/admin/common/nav_view',$data);
           $this->load->view('users/admin/common/sidebar_view',$data);
           $this->load->view('users/admin/common/content_top_view',$data);
-          $this->load->view('users/admin/web/gettew_admin_choose_theme_view',$data);
+          $this->load->view('users/admin/web/admin_choose_theme_view',$data);
           $this->load->view('common/footer_view',$data);
 
 
@@ -218,7 +218,7 @@ show_page("prewebsettings_action/choose_theme/".$this->input->post('web_address'
           $this->load->view('users/admin/common/nav_view',$data);
           $this->load->view('users/admin/common/sidebar_view',$data);
           $this->load->view('users/admin/common/content_top_view',$data);
-          $this->load->view('users/admin/web/gettew_admin_choose_theme_view',$data);
+          $this->load->view('users/admin/web/admin_choose_theme_view',$data);
           $this->load->view('common/footer_view',$data);
 
 }
