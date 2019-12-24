@@ -15,8 +15,8 @@
   
 <?php
 //go against mvc here
-$cond = array("school_id" => $_SESSION['school_id'],"achieve_status" => "false");
-$actions = $this->users_model->get_actions($cond);
+/*$cond = array("school_id" => $_SESSION['school_id'],"achieve_status" => "false");
+$actions = $this->users_model->get_actions($cond);*/
 if (!empty($actions)){
  foreach ($actions as $action) {
 
