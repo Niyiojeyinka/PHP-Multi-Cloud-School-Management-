@@ -34,6 +34,23 @@ $password = $this->input->post("password");
     }
 }
 
+public function insert_meta(){
+
+$datab =[
+  'title'=>$this->input->post('title'),
+    'sitename'=>$this->input->post('sitename'),
+  'keywords'=>$this->input->post('keywords'),
+  'description'=>$this->input->post('description'),
+  'author'=>$this->input->post('author')
+
+];
+
+
+$data=['long_value'=> json_encode($datab,true)];
+
+$this->db->update("system_var",$data,array('variable_name'=> 'site_meta'));
+
+}
 public function get_site_meta()
 {
  //get from db here later
