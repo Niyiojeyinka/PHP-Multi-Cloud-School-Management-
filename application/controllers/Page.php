@@ -36,10 +36,10 @@ public function test()
       $data['keywords'] =  $this->keywords;
       $data['description'] =  $this->description;
 
-       $this->load->view('common/head_meta_view',$data); $this->load->view('common/header_view',$data);
-        
-		$this->load->view('public/home_view',$data);
-		$this->load->view('common/footer_view',$data);
+       $this->load->view('common/head_meta_view',$data); 
+       $this->load->view('common/header_view',$data);
+		   $this->load->view('public/home_view',$data);
+		   $this->load->view('common/footer_view',$data);
 
 
 
