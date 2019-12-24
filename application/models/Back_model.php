@@ -34,4 +34,12 @@ $password = $this->input->post("password");
     }
 }
 
+public function get_site_meta()
+{
+ //get from db here later
+$query= $this->db->get_where("system_var", ['variable_name'=> "site_meta"]);
+
+//return json_decode($query->row_array()['long_value'],true);
+ return ['title'=>"Cloud School management",'sitename'=>"Myschool App",'keywords'=>"Keyword separated by comma ','",'description'=>"The site SEO Description",'author'=>"Author"];
+}
 }
