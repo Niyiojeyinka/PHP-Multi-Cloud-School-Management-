@@ -30,7 +30,7 @@ public function test()
 }
 	public function index()
 	{
-      $data['web_favicon_slug'] = "assets/images/favicon.ico";
+      $data['web_favicon_slug'] = $this->favicon;
       $data['title'] = $this->siteName." | ".$this->tagLine;
       $data['author'] =  $this->author;
       $data['keywords'] =  $this->keywords;
@@ -48,7 +48,7 @@ public function test()
 
   public function pricing()
   {
-     $data['web_favicon_slug'] = "assets/images/favicon.ico";
+     $data['web_favicon_slug'] = $this->favicon;
       $data['title'] = $this->siteName." | Pricing";
       $data['author'] =  $this->author;
       $data['keywords'] =  $this->keywords;
@@ -86,7 +86,7 @@ var_dump(explode(".", $_SERVER[ 'HTTP_HOST' ]));
     {
 
 //echo "test";
- $data['web_favicon_slug'] = "assets/images/favicon.ico";
+ $data['web_favicon_slug'] = $this->favicon;
       $data['title'] = $this->siteName." | School Registration";
       $data['author'] =  $this->author;
       $data['keywords'] =  $this->keywords;
@@ -147,7 +147,7 @@ $this->form_validation->set_rules("phone","Mobile Phone","trim|required|numeric"
 if ($this->form_validation->run() == FALSE)
 {
 //login page
-     $data['web_favicon_slug'] = "assets/images/favicon.ico";
+     $data['web_favicon_slug'] = $this->favicon;
       $data['title'] = $this->siteName." | Sign In";
       $data['author'] =  $this->author;
       $data['keywords'] =  $this->keywords;
@@ -196,7 +196,7 @@ $this->form_validation->set_rules('email','Email','required');
 $this->form_validation->set_rules('message','Message Contents','required');
 if(!$this->form_validation->run())
 {
-      $data['web_favicon_slug'] = "assets/images/favicon.ico";
+      $data['web_favicon_slug'] = $this->favicon;
       $data['title'] = $this->siteName." | Contact Us";
       $data['author'] =  $this->author;
       $data['keywords'] =  $this->keywords;
@@ -255,7 +255,7 @@ show_page('contact_us');
 public function sign_in()
 {
 
-     $data['web_favicon_slug'] = "assets/images/favicon.ico";
+     $data['web_favicon_slug'] = $this->favicon;
       $data['title'] = $this->siteName." | Sign In";
       $data['author'] =  $this->author;
       $data['keywords'] =  $this->keywords;
@@ -273,7 +273,7 @@ public function staff_login($staff_id= NULL)
 $this->form_validation->set_rules("staff_id","Staff ID", "required");
 $this->form_validation->set_rules("password","Password", "required");
 if(!$this->form_validation->run())
-{     $data['web_favicon_slug'] = "assets/images/favicon.ico";
+{     $data['web_favicon_slug'] = $this->favicon;
       $data['title'] = $this->siteName." | Staff Login";
       $data['author'] =  $this->author;
       $data['keywords'] =  $this->keywords;
@@ -331,7 +331,7 @@ $this->form_validation->set_rules("phone","Mobile Number", "required");
 $this->form_validation->set_rules("password","Password", "required");
 if(!$this->form_validation->run())
 {
-     $data['web_favicon_slug'] = "assets/images/favicon.ico";
+     $data['web_favicon_slug'] = $this->favicon;
       $data['title'] = $this->siteName." | Parent Login";
       $data['author'] =  $this->author;
       $data['keywords'] =  $this->keywords;
@@ -371,7 +371,7 @@ $this->form_validation->set_rules("student_id","Student ID", "required");
 $this->form_validation->set_rules("password","Password", "required");
 if(!$this->form_validation->run())
 {
-     $data['web_favicon_slug'] = "assets/images/favicon.ico";
+     $data['web_favicon_slug'] = $this->favicon;
       $data['title'] = $this->siteName." | Student Pricing";
       $data['author'] =  $this->author;
       $data['keywords'] =  $this->keywords;
