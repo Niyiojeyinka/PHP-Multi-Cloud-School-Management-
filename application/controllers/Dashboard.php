@@ -836,7 +836,7 @@ if (!$this->form_validation->run()) {
     
 
 $school = $this->schools_model->get_school_by_id($_SESSION['school_id']);
-$school_sessions= json_decode($school['session'],true);
+$school_sessions= json_decode($school['sessions'],true);
 $schl_sec_div = json_decode($school['session_division'],true);
 
 $cond = array(
@@ -961,7 +961,7 @@ $data['school_id']
 $data['levels'] = $this->schools_model->get_levels($arr);
 
 $school = $this->schools_model->get_school_by_id($_SESSION['school_id']);
-$data['school_sessions'] = json_decode($school['session'],true);
+$data['school_sessions'] = json_decode($school['sessions'],true);
 
 
 
@@ -975,7 +975,7 @@ $data['school_sessions'] = json_decode($school['session'],true);
   }else{
 
 $school = $this->schools_model->get_school_by_id($_SESSION['school_id']);
-$school_sessions = json_decode($school['session'],true);
+$school_sessions = json_decode($school['sessions'],true);
 //make array unique here
 
 if(!in_array($this->input->post('session'), $school_sessions))
@@ -1179,7 +1179,7 @@ $data['school_id']
 $data['levels'] = $this->schools_model->get_levels($arr);
 
 $school = $this->schools_model->get_school_by_id($_SESSION['school_id']);
-$data['school_sessions'] = json_decode($school['session'],true);
+$data['school_sessions'] = json_decode($school['sessions'],true);
 
 $data['school'] = $school;
 
@@ -1193,7 +1193,7 @@ $data['school'] = $school;
   }else{
 
 $school = $this->schools_model->get_school_by_id($_SESSION['school_id']);
-$school_sessions = json_decode($school['session'],true);
+$school_sessions = json_decode($school['sessions'],true);
 //make array unique here
 $levels = json_encode($this->input->post('level'),true);
 $access_type =$this->input->post('access_type');
@@ -2089,7 +2089,7 @@ if ($this->input->post('det') == 'set') {
   //use current
 $school= $this->schools_model->get_school_by_id($_SESSION['school_id']);
 //use session set by admin
-$school_sessions = json_decode($school['session'],true);
+$school_sessions = json_decode($school['sessions'],true);
 $session = $school_sessions[count($school_sessions)-1];
 $term = $school['term'];
  $offline_payment = array(
