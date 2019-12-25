@@ -131,7 +131,7 @@ $user = $this->users_model->get_user_by_phone($this->input->post('phone'));
     $_SESSION['school_id'] = $user['school_id'];
 //default school is the first school register
 
-    show_page("Gettew_dashboard");
+    show_page("dashboard");
     }
  	}
 
@@ -171,7 +171,7 @@ $user = $this->users_model->get_user_by_phone($this->input->post('phone'));
     //get school id
 
     $_SESSION['school_id'] = $user['school_id'];
-    show_page("Gettew_dashboard");
+    show_page("dashboard");
 
         }
         else{
