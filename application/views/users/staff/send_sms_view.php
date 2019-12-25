@@ -24,7 +24,7 @@
 
       }
        ?>
-   </span><br> <?php echo form_open("gettew_dashboard_cont/send_sms/".empty($this->uri->segment(3))?"":$this->uri->segment(3)."/".$this->uri->segment(4)); ?>
+   </span><br> <?php echo form_open("dashboard_cont/send_sms/".empty($this->uri->segment(3))?"":$this->uri->segment(3)."/".$this->uri->segment(4)); ?>
 
    <h5 class="w3-label"><b>Message</b></h5><i class="w3-small">160 Max characters
    </i><br>

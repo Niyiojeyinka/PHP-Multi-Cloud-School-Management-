@@ -1,7 +1,7 @@
 <div class="w3-container w3-center"><br>
 <hr>
 <span class="w3-text-teal w3-xlarge">School Details</span>
-<?= form_open_multipart('gettew_Dashboard/edit_school_details') ?>
+<?= form_open_multipart('Dashboard/edit_school_details') ?>
 <hr>
 <div class="w3-center">
 <img style="width:128px;height:128px" src="<?php 

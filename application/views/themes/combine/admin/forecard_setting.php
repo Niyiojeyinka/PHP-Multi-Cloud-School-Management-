@@ -162,7 +162,7 @@ if(isset($_POST['third_icon_text']))
 <input type="submit" class="w3-button w3-teal w3-hover-white w3-border w3-border-teal w3-hover-text-teal w3-margin" name="submit" value="Update" />
 </form>
 <?php
- echo '<br><a class="w3-button" href="'.site_url('gettew_prewebsettings_action/theme_settings/'.$this->uri->segment(3)).'/edit_home">  <i  style="margin-right:3%" class="fa fa-eye w3-text-teal w3-large w3-center"></i>View</a>';
+ echo '<br><a class="w3-button" href="'.site_url('prewebsettings_action/theme_settings/'.$this->uri->segment(3)).'/edit_home">  <i  style="margin-right:3%" class="fa fa-eye w3-text-teal w3-large w3-center"></i>View</a>';
 ?>
 
 

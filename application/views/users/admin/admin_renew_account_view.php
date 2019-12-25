@@ -1,10 +1,10 @@
-<div>
+c<div>
 <center>
 	<hr>
 <b class='w3-text-theme w3-large'>Package Renewal</b>
 
 <div class="w3-padding-jumbo">
-	<?= form_open('gettew_dashboard/renew_account')?>
+	<?= form_open('dashboard/renew_account')?>
 	<?=isset($_SESSION['action_status_report'])?$_SESSION['action_status_report']:"" ?>
 	
 <hr>

@@ -15,7 +15,7 @@ if(isset($_SESSION['action_status_report']))
   <span class="w3-text-theme w3-medium w3-center">School Level System</span><br>
   <hr>
   <div class="w3-container w3-center">
-  	<?= form_open("gettew_dashboard/set_level_details") ?>
+  	<?= form_open("dashboard/set_level_details") ?>
 <div class="w3-container w3-quarter">
 
 <?php
@@ -104,7 +104,7 @@ echo "</tr>";
   <hr>
 
 
-<?= form_open("gettew_dashboard/set_term_details") ?>
+<?= form_open("dashboard/set_term_details") ?>
 
 <div id="division" class="w3-container">
 		
@@ -191,7 +191,7 @@ echo "</tr>";
 
 <hr>
   <span class="w3-text-theme w3-medium w3-center">FEE Options</span><br>
-<?= form_open("gettew_dashboard/set_fee_option")?>
+<?= form_open("dashboard/set_fee_option")?>
 
 <select name="fee_option" class="w3-padding">
 
@@ -217,7 +217,7 @@ if ($school['fee_option'] == "term") {
   <hr>
 <br>
 <div class="w3-center" id="options">
-  <?= form_open("gettew_dashboard/set_student_option")?>
+  <?= form_open("dashboard/set_student_option")?>
   <span class="w3-label">Student Options <br><span class="w3-tiny">Each separated by comma ',' e.g science,art</span></span><br>
   <input type="text" name="options" class="w3-padding" value="<?= empty($options) ? "Science,Art,Commercial":$options ?>" />
   	<br>

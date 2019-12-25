@@ -20,7 +20,7 @@ if(!empty($items))
 
 
 <span class="w3-padding-top w3-padding-bottom w3-border w3-border-teal">
-<a href='<?= site_url('gettew_webfunction/confirm_delete/'.$this->uri->segment(3).'/media/'.$item['id']) ?>'><span class="w3-padding w3-border-left w3-border-teal"><i class="fa fa-trash  w3-text-red"></i></span></a>
+<a href='<?= site_url('webfunction/confirm_delete/'.$this->uri->segment(3).'/media/'.$item['id']) ?>'><span class="w3-padding w3-border-left w3-border-teal"><i class="fa fa-trash  w3-text-red"></i></span></a>
 
 <button onclick="copyToClipboard(document.getElementById('img<?=$item['id'] ?>').innerHTML)" class="w3-white w3-padding w3-border w3-border-teal"><i class="fa fa-copy w3-text-green"></i><i class="w3-tiny">Copy</i></button>
 </span>

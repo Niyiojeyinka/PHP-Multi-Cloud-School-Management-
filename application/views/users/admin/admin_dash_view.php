@@ -12,7 +12,7 @@ if(isset($_SESSION['action_status_report']))
 ?>
 
   <div class="w3-row-padding w3-margin-bottom">
-   <!-- <a href="<?=site_url('gettew_dashboard/application_form') ?>"> <div class="w3-quarter">
+   <!-- <a href="<?=site_url('dashboard/application_form') ?>"> <div class="w3-quarter">
       <div class="w3-container w3-red w3-padding-16">
         <div class="w3-left"><i class="fa fa-user-plus w3-xxxlarge"></i></div>
         <div class="w3-right">
@@ -22,7 +22,7 @@ if(isset($_SESSION['action_status_report']))
         <h4>Applications</h4>
       </div>
     </div></a>-->
-<a href="<?=site_url('gettew_dashboard/cbt_application_form') ?>"> <div class="w3-quarter">
+<a href="<?=site_url('dashboard/cbt_application_form') ?>"> <div class="w3-quarter">
       <div class="w3-container w3-red w3-padding-16">
         <div class="w3-left"><i class="fa fa-desktop w3-xxxlarge"></i></div>
         <div class="w3-right">
@@ -33,7 +33,7 @@ if(isset($_SESSION['action_status_report']))
       </div>
     </div></a>
 
-   <a href="<?=site_url('gettew_dashboard/view_students_list') ?>"> <div class="w3-quarter">
+   <a href="<?=site_url('dashboard/view_students_list') ?>"> <div class="w3-quarter">
       <div class="w3-container w3-blue w3-padding-16">
         <div class="w3-left"><i class="fa fa-users w3-xxxlarge"></i></div>
         <div class="w3-right">
@@ -43,7 +43,7 @@ if(isset($_SESSION['action_status_report']))
         <h4>Students</h4>
       </div>
     </div></a>
-   <a href="<?=site_url('gettew_dashboard/view_staff_list') ?>"> <div class="w3-quarter">
+   <a href="<?=site_url('dashboard/view_staff_list') ?>"> <div class="w3-quarter">
       <div class="w3-container w3-teal w3-padding-16">
         <div class="w3-left"><i class="fa fa-user w3-xxxlarge"></i></div>
         <div class="w3-right">
@@ -53,7 +53,7 @@ if(isset($_SESSION['action_status_report']))
         <h4>Staff</h4>
       </div>
     </div></a>
-       <a href="<?=site_url('gettew_dashboard/payments') ?>"><div class="w3-quarter">
+       <a href="<?=site_url('dashboard/payments') ?>"><div class="w3-quarter">
       <div class="w3-container w3-orange w3-text-white w3-padding-16">
         <div class="w3-left"><i class="fa fa-credit-card w3-xxxlarge"></i></div>
         <div class="w3-right">
@@ -88,12 +88,12 @@ School Website Builder
 if(!empty($school_web))
 {
 
-echo "<a class='w3-button w3-border w3-margin w3-green'  href='".site_url('gettew_webdashboard')."'>Go to Dashboard</a>";
+echo "<a class='w3-button w3-border w3-margin w3-green'  href='".site_url('webdashboard')."'>Go to Dashboard</a>";
 
 
 }else{
 
-echo "<a class='w3-button w3-border w3-margin'  href='".site_url('gettew_prewebsettings')."'>Get Started for Free</a>";
+echo "<a class='w3-button w3-border w3-margin'  href='".site_url('prewebsettings')."'>Get Started for Free</a>";
 
 
 }
@@ -111,7 +111,7 @@ Gettew Result Publishing Solution
 <span class="w3-small">Our online result publishing tools  let you publish your students' result online with few clicks.</span>
 <br>
 
-<a class='w3-button w3-border w3-margin'  href='<?= site_url('gettew_resultmanager/index') ?>'>Get Started</a>
+<a class='w3-button w3-border w3-margin'  href='<?= site_url('resultmanager/index') ?>'>Get Started</a>
 
 </div>
 </div>
@@ -127,7 +127,7 @@ Gettew SMS Solution</b><br>
 Gettew Bulk SMS Solution
 <br><span class="w3-small">Gettew SMS Solution let you send SMS ,bulk Messages,automated Messages,Greetings,Quick Notice and many more to parents and even staff from your dashboard.</span>
 <br>
-<a class='w3-button w3-border w3-margin'  href='<?= site_url('gettew_dashboard_cont/send_sms') ?>'>Get Started</a>
+<a class='w3-button w3-border w3-margin'  href='<?= site_url('dashboard_cont/send_sms') ?>'>Get Started</a>
 
 </div>
 
@@ -142,7 +142,7 @@ Pay Your Staff Easily
 <span class="w3-small">Our Payroll Solution let you pay staff salary easily and also automate your payroll</span>
 <br>
 
-<a class='w3-button w3-border w3-margin'  href='<?= site_url('gettew_dashboard/payroll') ?>'>Coming Soon</a>
+<a class='w3-button w3-border w3-margin'  href='<?= site_url('dashboard/payroll') ?>'>Coming Soon</a>
 
 </div>
 </div>

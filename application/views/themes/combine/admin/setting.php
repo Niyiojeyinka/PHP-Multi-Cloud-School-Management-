@@ -65,7 +65,7 @@ echo "<br><br><span class='w3-padding w3-tag w3-xlarge w3-".getData("secondary_c
 
 
 <?php
- echo '<br><a class="w3-button" href="'.site_url('gettew_prewebsettings_action/theme_settings/'.$this->uri->segment(3)).'/edit_home">  <i  style="margin-right:3%" class="fa fa-eye w3-text-teal w3-large w3-center"></i>View</a>';
+ echo '<br><a class="w3-button" href="'.site_url('prewebsettings_action/theme_settings/'.$this->uri->segment(3)).'/edit_home">  <i  style="margin-right:3%" class="fa fa-eye w3-text-teal w3-large w3-center"></i>View</a>';
 ?>
 
 

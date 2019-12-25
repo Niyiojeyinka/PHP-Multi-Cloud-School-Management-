@@ -4,7 +4,7 @@
 
 <?php
 
-echo form_open_multipart('gettew_webfunction/edit_event/'.$this->uri->segment(3)."/".$this->uri->segment(4));
+echo form_open_multipart('webfunction/edit_event/'.$this->uri->segment(3)."/".$this->uri->segment(4));
 
 ?>
 <span class="w3-text-red"><?php

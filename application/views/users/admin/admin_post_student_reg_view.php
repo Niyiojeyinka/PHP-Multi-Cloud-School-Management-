@@ -2,7 +2,7 @@
 if ($this->uri->segment(1) =="staff") {
   $controller = "staff";
 }else{
-    $controller = "gettew_dashboard_cont";
+    $controller = "dashboard_cont";
 
 }
 
@@ -28,7 +28,7 @@ if(isset($_SESSION['action_status_report']))
 <a href="<?=site_url("/idcard/check_pay_fees/".$student['student_id'])?>" class="w3-block w3-button w3-margin w3-teal w3-round-large w3-hover-white w3-border w3-border-teal w3-hover-text-teal">Check Payments Activities</a>
 
 <a href="<?=site_url($controller."/send_sms/parent/".$student['parent_id']) ?>" class="w3-block w3-button w3-margin w3-teal w3-round-large w3-hover-white w3-border w3-border-teal w3-hover-text-teal">Send Parent SMS</a>
-<!--<a href="<?=site_url("gettew_dashboard_cont/send_sms/staff/") ?>" class="w3-block w3-button w3-margin w3-teal w3-round-large w3-hover-white w3-border w3-border-teal w3-hover-text-teal">Send Teacher an SMS</a>-->
+<!--<a href="<?=site_url("dashboard_cont/send_sms/staff/") ?>" class="w3-block w3-button w3-margin w3-teal w3-round-large w3-hover-white w3-border w3-border-teal w3-hover-text-teal">Send Teacher an SMS</a>-->
 
 
 

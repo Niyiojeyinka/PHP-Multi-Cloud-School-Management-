@@ -1,7 +1,7 @@
 <div class="w3-container w3-center"><br>
 <hr>
 <span class="w3-text-teal w3-xlarge">Result Settings</span>
-<?= form_open_multipart('gettew_Dashboard/result_settings') ?>
+<?= form_open_multipart('Dashboard/result_settings') ?>
 <hr>
 USE ACCESS CARD:Students will have to buy a card from the school to check their result.<br>
 <select onclick="this.value=='paid'?document.getElementById('selling_price').style.display ='block':document.getElementById('selling_price').style.display ='none';" class="w3-padding w3-margin" name="access_type">

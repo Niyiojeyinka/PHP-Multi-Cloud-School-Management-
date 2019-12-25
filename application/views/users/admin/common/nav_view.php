@@ -4,7 +4,7 @@
 
 
     <div class="w3-right w3-small    w3-text-white"> 
-              <a href="<?=site_url("gettew_dashboard/account_settings") ?>"
+              <a href="<?=site_url("dashboard/account_settings") ?>"
    class="w3-bar-item w3-margin-left w3-margin-right"
    ><i class="fa fa-user w3-medium"></i></a>
 

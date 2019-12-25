@@ -8,7 +8,7 @@
   <?= isset($_SESSION['action_status_report'])?$_SESSION['action_status_report']:'' ?>
 
 <div class="">
-  <?= form_open('gettew_Dashboard/add_offline_payment') ?>
+  <?= form_open('Dashboard/add_offline_payment') ?>
 
 <span class="w3-label">Student ID</span><br>
 <input type="text" name="student_id" placeholder="Student ID" class="w3-padding w3-margin"/><br>
@@ -68,7 +68,7 @@ foreach ($schl_sec_div as $term) {
 	}
 	
 }else{
-	echo "No terms set Please set this <a class='w3-text-theme' href='".site_url('gettew_dashboard/school_settings')."'>Here</a>";
+	echo "No terms set Please set this <a class='w3-text-theme' href='".site_url('dashboard/school_settings')."'>Here</a>";
 }
 
 

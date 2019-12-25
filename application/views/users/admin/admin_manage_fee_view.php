@@ -10,7 +10,7 @@
   <hr>
 
   <div class="">
-    <?= form_open('gettew_dashboard/manage_fee') ?>
+    <?= form_open('dashboard/manage_fee') ?>
     <span class="w3-label">FEE Title</span>
      <br>
     <input style="" class='w3-center w3-padding w3-border'
@@ -86,7 +86,7 @@ if(!empty($fees))
     <tr><td><b>Fee Name</b></td><td><b>Amount</b></td><td><b>Class/Level</b></td><td><b>Option</b></td><td><b>Session</b></td><td><b>Term/Division</b></td><td><b>Delete</b></td></tr>';
 foreach ($fees as $fee) {
     ?>
-<tr><td><?=$fee['fee_title'] ?></td><td><?=$fee['amount'] ?></td><td><?=$level_data[$fee['level']-1]['level_shortname'] ?></td><td><?=$fee['option'] =="General"? "General": $fee['option'] ?></td><td><?=$fee['session'] ?></td><td><?=$fee['term'] ?></td><td><a href="<?=site_url('gettew_webfunction/confirm_delete/na/fee/'.$fee['id']) ?>"><span class="w3-large fa fa-close w3-text-red"></span></a></td></tr>
+<tr><td><?=$fee['fee_title'] ?></td><td><?=$fee['amount'] ?></td><td><?=$level_data[$fee['level']-1]['level_shortname'] ?></td><td><?=$fee['option'] =="General"? "General": $fee['option'] ?></td><td><?=$fee['session'] ?></td><td><?=$fee['term'] ?></td><td><a href="<?=site_url('webfunction/confirm_delete/na/fee/'.$fee['id']) ?>"><span class="w3-large fa fa-close w3-text-red"></span></a></td></tr>
 
 
    <?php

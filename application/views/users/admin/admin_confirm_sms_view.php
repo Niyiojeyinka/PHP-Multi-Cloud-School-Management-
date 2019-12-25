@@ -16,7 +16,7 @@ Total Cost</span><br>
 
 
  <!--if total cost less than account bal go to deposit page-->
-<?=form_open("gettew_dashboard_cont/process_sms") ?>
+<?=form_open("dashboard_cont/process_sms") ?>
 <button name="action" value="cancel" class="w3-button w3-red w3-hover-white w3-border w3-border-red w3-hover-text-red w3-margin">Cancel</button>
 
 <button name="action" value="send" class="w3-button w3-teal w3-hover-white w3-border w3-border-teal w3-hover-text-teal w3-margin">Send</button>

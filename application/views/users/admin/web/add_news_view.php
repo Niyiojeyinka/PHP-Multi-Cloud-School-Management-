@@ -4,7 +4,7 @@
 
 <?php
 
-echo form_open_multipart('gettew_webfunction/add_news/'.$this->uri->segment(3));
+echo form_open_multipart('webfunction/add_news/'.$this->uri->segment(3));
 
 ?>
 <span class="w3-text-red"><?php
@@ -39,7 +39,7 @@ function uploadImage(image) {
     var data = new FormData();
     data.append("image", image);
     $.ajax({
-        url: '<?=site_url("gettew_webfunction/upload_image") ?>',
+        url: '<?=site_url("webfunction/upload_image") ?>',
         cache: false,
         contentType: false,
         processData: false,
@@ -68,7 +68,7 @@ function uploadImage(image) {
 <br>
 </center>
 
-<a class="w3-btn w3-green w3-margin" href="<?php echo site_url("gettew_webfunction/manage_media/".$this->uri->segment(3)); ?>">Go to Media</a><br>
+<a class="w3-btn w3-green w3-margin" href="<?php echo site_url("webfunction/manage_media/".$this->uri->segment(3)); ?>">Go to Media</a><br>
 
 
 <input type="submit" class="w3-button w3-padding w3-hover-white w3-round-large w3-border w3-border-blue w3-hover-text-blue w3-blue w3-margin" value="Publish" name="submit"></input><br>

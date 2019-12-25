@@ -12,7 +12,7 @@
 <br>Please fund your account and click on the link below to upgrade/renew your license. Thank you!
 
 	</div>
-<a href="<?=site_url('gettew_dashboard/upgrade_account') ?>" class='w3-button w3-green w3-hover-text-green w3-hover-white w3-border w3-border-green w3-margin'><i class="fa fa-chevron-up"></i> Upgrade Account Now</a>
+<a href="<?=site_url('dashboard/upgrade_account') ?>" class='w3-button w3-green w3-hover-text-green w3-hover-white w3-border w3-border-green w3-margin'><i class="fa fa-chevron-up"></i> Upgrade Account Now</a>
 
 
 </center>

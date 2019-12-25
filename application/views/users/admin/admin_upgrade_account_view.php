@@ -5,7 +5,7 @@
 
 
 <div class="w3-padding-jumbo">
-	<?= form_open('gettew_dashboard/upgrade_account')?>
+	<?= form_open('dashboard/upgrade_account')?>
 	<?=isset($_SESSION['action_status_report'])?$_SESSION['action_status_report']:"" ?>
 	
 <hr>

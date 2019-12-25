@@ -28,7 +28,7 @@ if(isset($_SESSION['action_status_report']))
 
 
 </div>
-<?= form_open("gettew_dashboard/change_term") ?>
+<?= form_open("dashboard/change_term") ?>
 
 <select class="w3-padding w3-margin" name="term">
 	<option disabled selected>Choose term/division</option>
@@ -46,7 +46,7 @@ foreach ($schl_sec_div as $term) {
 	}
 	
 }else{
-	echo "No terms set Please set this <a class='w3-text-theme' href='".site_url('gettew_dashboard/school_settings')."'>Here</a>";
+	echo "No terms set Please set this <a class='w3-text-theme' href='".site_url('dashboard/school_settings')."'>Here</a>";
 }
 
 

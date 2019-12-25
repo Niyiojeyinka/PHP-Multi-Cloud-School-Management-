@@ -15,7 +15,7 @@ echo "<span class='fa fa-circle w3-text-black w3-tiny'> </span> <span class='w3-
 echo $item['title'];
 echo "</span><br>";
 echo "<img style='max-width:150px' src='".base_url('assets/media/'.$item['slug'])."' class=''/>";
-echo  "<a href='".site_url('gettew_webfunction/confirm_delete/'.$this->uri->segment(3).'/slider/'.$item['ref'])."' ><span class='fa fa-trash w3-text-theme w3-margin-right'></span></a>";
+echo  "<a href='".site_url('webfunction/confirm_delete/'.$this->uri->segment(3).'/slider/'.$item['ref'])."' ><span class='fa fa-trash w3-text-theme w3-margin-right'></span></a>";
 
 echo "</div>";
 

@@ -68,7 +68,7 @@ if (!empty($payments)) {
   <?php
   foreach ($payments as $fee) {
     
-echo "<tr><td><i class='w3-text-teal'><a href='".site_url('gettew_dashboard/student_details/'.$fee['student_id'])."'>".get_student_fullname($fee['student_id'])."</a></i></td><td>".$fee['session']."</td><td>".$fee['term']."</td><td>".$fee['amount']."</td><td>".$fee['method']."</td><td>".date('F,j Y,g:ia',$fee['time'])."</td></tr>";
+echo "<tr><td><i class='w3-text-teal'><a href='".site_url('dashboard/student_details/'.$fee['student_id'])."'>".get_student_fullname($fee['student_id'])."</a></i></td><td>".$fee['session']."</td><td>".$fee['term']."</td><td>".$fee['amount']."</td><td>".$fee['method']."</td><td>".date('F,j Y,g:ia',$fee['time'])."</td></tr>";
 
   }
 
@@ -94,7 +94,7 @@ echo $pagination;
 </div>
 <div>
 	<span class="w3-text-theme w3-medium w3-center">Confirm Payment</span><hr>
-  <?= form_open('gettew_dashboard/confirm_student_payment') ?>
+  <?= form_open('dashboard/confirm_student_payment') ?>
   <input type="text" name="student_id" class="w3-padding" placeholder="Student Id" /><br>
   
 <!---\
@@ -133,7 +133,7 @@ foreach ($schl_sec_div as $term) {
 	}
 	
 }else{
-	echo "No terms set Please set this <a class='w3-text-theme' href='".site_url('gettew_dashboard/school_settings')."'>Here</a>";
+	echo "No terms set Please set this <a class='w3-text-theme' href='".site_url('dashboard/school_settings')."'>Here</a>";
 }
 
 

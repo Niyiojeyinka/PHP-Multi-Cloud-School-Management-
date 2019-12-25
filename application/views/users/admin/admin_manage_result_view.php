@@ -2,7 +2,7 @@
 if ($this->uri->segment(1) =="staff") {
   $action_slug = "staff/result_manager";
 }else{
-   $action_slug = "gettew_resultmanager/index";
+   $action_slug = "resultmanager/index";
 
 }
 
@@ -93,7 +93,7 @@ foreach ($schl_sec_div as $term) {
 	}
 	
 }else{
-	echo "No terms set Please set this <a class='w3-text-theme' href='".site_url('gettew_dashboard/school_settings')."'>Here</a>";
+	echo "No terms set Please set this <a class='w3-text-theme' href='".site_url('dashboard/school_settings')."'>Here</a>";
 }
 
 

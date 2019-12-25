@@ -11,7 +11,7 @@ if(isset($_SESSION['action_status_report']))
 }
 ?><i class="w3-text-red"><?=validation_errors()?></i>
 <hr>
-<?= form_open("gettew_dashboard/cbt_application_form") ?>
+<?= form_open("dashboard/cbt_application_form") ?>
 
 <span class="w3-label">Address</span><br>
 <input type="text" name="address" class="w3-padding w3-margin" />

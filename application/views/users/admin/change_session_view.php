@@ -20,7 +20,7 @@ if(isset($_SESSION['action_status_report']))
 
 
 </div>
-<?= form_open("gettew_dashboard/change_session") ?>
+<?= form_open("dashboard/change_session") ?>
 
 <select class="w3-padding w3-margin" name="session">
 	<option disabled selected>Choose Session</option>

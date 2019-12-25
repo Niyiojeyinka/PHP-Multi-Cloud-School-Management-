@@ -10,7 +10,7 @@
   <hr>
 
   <div class="">
-    <?= form_open('gettew_dashboard/manage_subject') ?>
+    <?= form_open('dashboard/manage_subject') ?>
     <span class="w3-label">Subject Name</span>
 
     <input style="" class='w3-center w3-padding'
@@ -33,7 +33,7 @@ if(!empty($added_subjects))
 {
 foreach ($added_subjects as $subject) {
     ?>
-<tr><td><span class="w3-margin"><?= $subject['title']?></span></td><td><a href="<?=site_url('gettew_webfunction/confirm_delete/na/subject/'.$subject['id']) ?>"><span class="w3-large fa fa-close w3-text-red"></span></a></td></tr>
+<tr><td><span class="w3-margin"><?= $subject['title']?></span></td><td><a href="<?=site_url('webfunction/confirm_delete/na/subject/'.$subject['id']) ?>"><span class="w3-large fa fa-close w3-text-red"></span></a></td></tr>
 
 
    <?php

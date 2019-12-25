@@ -66,7 +66,7 @@ echo base_url(
 
                  ?></div>
                <div class='w3-container'>
-                <?= form_open_multipart('gettew_Dashboard/edit_details_profile_img') ?>
+                <?= form_open_multipart('Dashboard/edit_details_profile_img') ?>
                  
 
                    <i  style='margin-right:3%' class="fa fa-image
@@ -105,7 +105,7 @@ echo base_url(
 </div>
 
 <hr>
-<?= form_open_multipart('gettew_Dashboard/account_settings') ?>
+<?= form_open_multipart('Dashboard/account_settings') ?>
 <div class="w3-container input-grid-container">
 <div class="w3-quarter">
   <span class="w3-label">FirstName</span><br>
@@ -144,5 +144,5 @@ value="Update Data"/><br><br>
 </form></center>
 <hr>
 <center>
-<a class="w3-btn w3-teal w3-hover-text-teal w3-hover-white w3-border w3-margin w3-border-teal w3-center" href="<?=site_url('gettew_Dashboard/change_password') ?>">Change Account Password</a></div>
+<a class="w3-btn w3-teal w3-hover-text-teal w3-hover-white w3-border w3-margin w3-border-teal w3-center" href="<?=site_url('Dashboard/change_password') ?>">Change Account Password</a></div>
 </center>

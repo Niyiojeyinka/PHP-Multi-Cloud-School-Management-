@@ -5,7 +5,7 @@
 <span class="w3-text-red"><?=validation_errors() ?></span>
 
   <hr>
-<?= form_open("gettew_dashboard/change_password") ?>
+<?= form_open("dashboard/change_password") ?>
 <span class="w3-label">Current Password</span><br>
 <input type="Password" name="current_password" class="w3-padding w3-margin" placeholder="Current Password"/>
 <br>

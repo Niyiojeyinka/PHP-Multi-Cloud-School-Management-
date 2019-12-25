@@ -9,7 +9,7 @@
 <div class="w3-text-red"><?= validation_errors() ?></div>
 
 
-<?= form_open('Gettew_prewebsettings/index/'.$this->uri->segment(3)) ?>
+<?= form_open('prewebsettings/index/'.$this->uri->segment(3)) ?>
 <div class="w3-container w3-margin">
 <div class="w3-half">
 	
@@ -52,7 +52,7 @@
 
     }
 
- $.get("/index.php/gettew_prewebsettings_action/check_sub_domain/"+subdomain, function(data, status){
+ $.get("/index.php/prewebsettings_action/check_sub_domain/"+subdomain, function(data, status){
 
  	if (status == "success")
  	{

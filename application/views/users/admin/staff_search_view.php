@@ -25,7 +25,7 @@ echo base_url(
 
 
   <div class="">
-    <?= form_open('Gettew_Dashboard/search_staff') ?>
+    <?= form_open('Dashboard/search_staff') ?>
     <span class="w3-label">Search</span>
 
     <input style="" class='w3-center w3-padding-top w3-padding-bottom
@@ -50,7 +50,7 @@ foreach ($items as $item) {
 
 
 ?>
-<a href='<?= site_url('Gettew_Dashboard/staff_details/'.$item['staff_id'])?>'>
+<a href='<?= site_url('Dashboard/staff_details/'.$item['staff_id'])?>'>
 <div class="w3-card-4 w3-margin w3-padding-large" style="width: 300px;height:auto;display: inline-block;">
 
 <img style="width:128px;height:128px" src="<?php 

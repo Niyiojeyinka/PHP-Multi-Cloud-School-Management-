@@ -6,7 +6,7 @@
 <ul>
   <li>Upload Files</li><br>
     <li>Manage Files</li><br>
-<a href="<?php echo site_url("gettew_webfunction/manage_media/".$this->uri->segment(3)); ?>" class="w3-button w3-teal w3-hover-white w3-border w3-border-teal w3-hover-text-teal" style="text-decoration: none;">Open Media</a>
+<a href="<?php echo site_url("webfunction/manage_media/".$this->uri->segment(3)); ?>" class="w3-button w3-teal w3-hover-white w3-border w3-border-teal w3-hover-text-teal" style="text-decoration: none;">Open Media</a>
 </ul>
 
 

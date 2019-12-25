@@ -2,7 +2,7 @@
 if ($this->uri->segment(1) =="staff") {
   $controller = "staff";
 }else{
-    $controller = "gettew_dashboard";
+    $controller = "dashboard";
 
 }
 

@@ -313,7 +313,7 @@ function populateCountries(countryElementId, stateElementId){
   <span class="w3-text-theme w3-xlarge w3-center w3-serif">Select Your School Location</span><br>
   <hr>
 
-	<?= form_open('gettew_dashboard_cont/choose_location') ?>
+	<?= form_open('dashboard_cont/choose_location') ?>
 
 	<br>
 	<span class="w3-label">Country:</span><br>

@@ -5,11 +5,11 @@
   <hr>
   <span class="w3-text-theme w3-xlarge w3-center">Manage Staff</span><br>
   <hr>
-  <a href="<?= site_url('gettew_dashboard/view_staff_list') ?>" class="w3-button w3-theme  w3-hover-white w3-hover-text-teal w3-border w3-border-teal w3-center">View Staff List</a><br>
+  <a href="<?= site_url('dashboard/view_staff_list') ?>" class="w3-button w3-theme  w3-hover-white w3-hover-text-teal w3-border w3-border-teal w3-center">View Staff List</a><br>
   <hr>
 
   <div class="">
-    <?= form_open('gettew_Dashboard/search_staff') ?>
+    <?= form_open('Dashboard/search_staff') ?>
     <span class="w3-label">Search</span>
 
     <input style="" class='w3-center w3-padding
@@ -31,7 +31,7 @@
 
 
 <div class="">
-  <?= form_open_multipart('gettew_Dashboard/manage_staff') ?>
+  <?= form_open_multipart('Dashboard/manage_staff') ?>
 
   <div class="w3-center">
   <img style="width:128px;height:128px" src="<?= base_url(

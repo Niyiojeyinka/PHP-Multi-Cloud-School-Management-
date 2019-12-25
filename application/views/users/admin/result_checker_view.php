@@ -11,7 +11,7 @@ if(isset($_SESSION['action_status_report']))
 }
 ?><i class="w3-text-red"><?=validation_errors()?></i>
 <hr>
-<?= form_open("gettew_dashboard_cont/generate_result_checker") ?>
+<?= form_open("dashboard_cont/generate_result_checker") ?>
 
 <div>
 	ACCOUNT BALANCE : <span>NGN<?=$school['account_balance'] ?></span>

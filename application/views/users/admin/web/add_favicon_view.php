@@ -4,7 +4,7 @@
 
 <?php
 
-echo form_open_multipart('gettew_webfunction/change_favicon/'.$this->uri->segment(3));
+echo form_open_multipart('webfunction/change_favicon/'.$this->uri->segment(3));
 
 ?>
 <span ="w3-text-red"><?php

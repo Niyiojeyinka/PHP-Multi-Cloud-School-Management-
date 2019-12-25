@@ -3,7 +3,7 @@
 <span class="w3-xxxlarge  w3-serif w3-text-theme"><?= ucfirst($theme['name']) ?></span><br>
 
 
-<a class="w3-button w3-theme w3-large w3-margin" href="<?= site_url("gettew_prewebsettings_action/install_theme/".$theme['theme_id']."/".$this->uri->segment(4)) ?>">Install</a>
+<a class="w3-button w3-theme w3-large w3-margin" href="<?= site_url("prewebsettings_action/install_theme/".$theme['theme_id']."/".$this->uri->segment(4)) ?>">Install</a>
 
 
 
@@ -61,6 +61,6 @@ function imageShow(n) {
 </script>
 </div>
 
-<a class="w3-button w3-theme w3-large w3-margin" href="<?= site_url("gettew_prewebsettings_action/install_theme/".$theme['theme_id']."/".$this->uri->segment(4)) ?>">Install</a>
+<a class="w3-button w3-theme w3-large w3-margin" href="<?= site_url("prewebsettings_action/install_theme/".$theme['theme_id']."/".$this->uri->segment(4)) ?>">Install</a>
 
 </div>

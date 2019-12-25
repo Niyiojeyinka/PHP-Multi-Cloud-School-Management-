@@ -78,8 +78,8 @@ echo base_url(
 
 </div>
 
-<a href="<?=site_url("gettew_dashboard_cont/send_sms/staff/".$this->uri->segment(3)) ?>" class="w3-btn w3-green">Send SMS</a>
-<a href="<?=site_url('gettew_webfunction/confirm_delete/na/staff/'.$this->uri->segment(3)) ?>" class="w3-btn w3-red">Delete <i class="w3-text-white fa fa-trash"></i></a>
+<a href="<?=site_url("dashboard_cont/send_sms/staff/".$this->uri->segment(3)) ?>" class="w3-btn w3-green">Send SMS</a>
+<a href="<?=site_url('webfunction/confirm_delete/na/staff/'.$this->uri->segment(3)) ?>" class="w3-btn w3-red">Delete <i class="w3-text-white fa fa-trash"></i></a>
 
 </div>
 

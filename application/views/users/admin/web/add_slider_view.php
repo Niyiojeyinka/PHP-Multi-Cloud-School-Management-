@@ -4,7 +4,7 @@
 
 <?php
 
-echo form_open_multipart('gettew_webfunction/add_slider/'.$this->uri->segment(3));
+echo form_open_multipart('webfunction/add_slider/'.$this->uri->segment(3));
 
 ?>
 <span ="w3-text-red"><?php
@@ -21,15 +21,15 @@ if(isset($_SESSION['action_status_report']))
 <br>
 <span class="w3-label">Title:</span><br>
 <input type="text" class="w3-border-blue-grey w3-padding" name="title" value="<?php
-if(isset($_SESSION['gettew_media_action']))
+if(isset($_SESSION['media_action']))
 {
-echo $_SESSION['gettew_media_action']['title'];
+echo $_SESSION['media_action']['title'];
 	}else{
 		 echo set_value('title');
 	}
 
  ?>" placeholder="Media title" <?php
-if(isset($_SESSION['gettew_media_action']))
+if(isset($_SESSION['media_action']))
 {
 echo 'readonly';
 	}

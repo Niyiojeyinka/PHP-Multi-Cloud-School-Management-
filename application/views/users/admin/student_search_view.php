@@ -25,7 +25,7 @@ echo base_url(
 
 
   <div class="">
-    <?= form_open('Gettew_Dashboard/search_students') ?>
+    <?= form_open('Dashboard/search_students') ?>
     <span class="w3-label">Search</span>
 
     <input style="" class='w3-center w3-padding-top w3-padding-bottom
@@ -50,7 +50,7 @@ foreach ($items as $item) {
 
 
 ?>
-<a href='<?= site_url('Gettew_Dashboard/student_details/'.$item['student_id'])?>'>
+<a href='<?= site_url('Dashboard/student_details/'.$item['student_id'])?>'>
 <div class="w3-card-4 w3-margin w3-padding-large" style="width: 300px;height:auto;display: inline-block;">
 
 <img style="width:128px;height:128px" src="<?php 
@@ -72,7 +72,7 @@ echo base_url(
 <?php
  /*
 echo "<div class='w3-container w3-border w3-padding w3-margin'>";
- echo "<a href='".site_url('Gettew_Dashboard/student_details/'.$item['student_id'])."'>";
+ echo "<a href='".site_url('Dashboard/student_details/'.$item['student_id'])."'>";
 echo $item['firstname']." ".$item['lastname']." <br>";
 echo "</a>";
 echo "<span class='w3-small'>Last Seen:";

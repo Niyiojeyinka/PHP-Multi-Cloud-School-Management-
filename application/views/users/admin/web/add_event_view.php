@@ -4,7 +4,7 @@
 
 <?php
 
-echo form_open_multipart('gettew_webfunction/add_event/'.$this->uri->segment(3));
+echo form_open_multipart('webfunction/add_event/'.$this->uri->segment(3));
 
 ?>
 <span class="w3-text-red"><?php

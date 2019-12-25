@@ -33,10 +33,10 @@
             response.tx.chargeResponseCode == "0"
         ) {
             // redirect to a success page
-          window.location.assign('<?=site_url('Gettew_dashboard/confirm_pay_payment') ?>')
+          window.location.assign('<?=site_url('dashboard/confirm_pay_payment') ?>')
         } else {
             // redirect to a failure page.
-          window.location.assign('<?=site_url('Gettew_dashboard/fund_account') ?>')
+          window.location.assign('<?=site_url('dashboard/fund_account') ?>')
 
         }
 

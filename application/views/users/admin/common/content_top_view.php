@@ -20,7 +20,7 @@ echo "height:100vh;";
   //profiles/'.$user_details['profile_img']); ?>" class="w3-bar-item
    w3-margin-left w3-margin-right w3-text-white w3-btn w3-theme w3-right">
   <i class="fa fa-info"></i> Help</a>
-  <form style="display: inline-block;" action="<?= site_url("gettew_dashboard/process_nav_search") ?>" method="post">
+  <form style="display: inline-block;" action="<?= site_url("dashboard/process_nav_search") ?>" method="post">
   <!--<input type="search" name="search" class="w3-padding" placeholder="Search"/>-->
   <select name="context" class="w3-padding">
     <option selected disabled>Select Context</option>

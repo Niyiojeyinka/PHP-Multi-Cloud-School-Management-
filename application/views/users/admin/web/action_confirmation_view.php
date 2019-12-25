@@ -8,7 +8,7 @@
         echo $_SERVER['HTTP_REFERER'];
       } ?>">
   <i class="fa fa-long-arrow-left"></i>Cancel</a>
-  <a class="w3-button w3-margin w3-red w3-hover-white w3-border w3-border-red w3-hover-text-red" style="text-decoration: none;" href="<?= site_url('gettew_webfunction/delete_item/'.$address_id.'/'.$item_type.'/'.$id) ?>">
+  <a class="w3-button w3-margin w3-red w3-hover-white w3-border w3-border-red w3-hover-text-red" style="text-decoration: none;" href="<?= site_url('webfunction/delete_item/'.$address_id.'/'.$item_type.'/'.$id) ?>">
   <i class="fa fa-trash"></i> Delete</a>
  
 </div>
