@@ -823,7 +823,7 @@ $data['added_subjects'] = $this->schools_model->get_subjects($data['school']['id
   }else{
 $school= $this->schools_model->get_school_by_id($_SESSION['school_id']);
 //use session set by admin
-$school_sessions = json_decode($school['session'],true);
+$school_sessions = json_decode($school['sessions'],true);
 $session = $school_sessions[count($school_sessions)-1];
 $term = $school['term'];
 //if user choose to upload result for the chosen term and session

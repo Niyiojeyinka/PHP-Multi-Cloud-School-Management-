@@ -275,7 +275,7 @@ unset($_SESSION['message']);
 }else{
 
 $school = $this->schools_model->get_school_by_id($_SESSION['school_id']);
-$school_sessions = json_decode($school['session'],true);
+$school_sessions = json_decode($school['sessions'],true);
 $session = $school_sessions[count($school_sessions)-1];
 
 $_SESSION['last_sms_ref'] = substr(md5(time()), 0);
