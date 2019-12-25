@@ -43,7 +43,7 @@ show_page('dashboard_cont/choose_location');
      $this->author=$meta['author'];
       $this->noindex = '<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">';
      $this->favicon = base_url('assets/images/favicon.ico');
-   
+
     }
 
     public function index()
@@ -94,7 +94,7 @@ if (($data['school']['license']== "trial") && ($data['school']['license_expire']
           $this->load->view('users/admin/admin_dash_view',$data);
 
           }
-          $this->load->view('common/footer_view',$data);
+         // $this->load->view('common/footer_view',$data);
 
 
 
