@@ -80,18 +80,18 @@ if (!empty($data['school_web'])) {
 
 if (($data['school']['license']== "trial") && ($data['school']['license_expire'] < time()) && $enroll_for_web) {
             //its expired and its trial
-  $this->load->view('users/admin/gettew_admin_trial_expired_view',$data);
+  $this->load->view('users/admin/admin_trial_expired_view',$data);
 
 
           }elseif(($data['school']['license']== "active") && ($data['school']['license_expire'] < time()) && $enroll_for_web){
             //its expired and it normal subscription
-          $this->load->view('users/admin/gettew_admin_account_expired_view',$data);
+          $this->load->view('users/admin/admin_account_expired_view',$data);
 
 
           }else{
         //everything is normal
 
-          $this->load->view('users/admin/gettew_admin_dash_view',$data);
+          $this->load->view('users/admin/admin_dash_view',$data);
 
           }
           $this->load->view('common/footer_view',$data);
@@ -126,7 +126,7 @@ $data['no_students'] = $this->students_model->get_no_of_students(array("school_i
           $this->load->view('users/admin/common/nav_view',$data);
           $this->load->view('users/admin/common/sidebar_view',$data);
           $this->load->view('users/admin/common/content_top_view',$data);
-          $this->load->view('users/admin/gettew_admin_change_password_view',$data);
+          $this->load->view('users/admin/admin_change_password_view',$data);
           $this->load->view('common/footer_view',$data);
 
 }else{
@@ -182,7 +182,7 @@ $data['added_subjects'] = $this->schools_model->get_subjects($_SESSION['school_i
           $this->load->view('users/admin/common/nav_view',$data);
           $this->load->view('users/admin/common/sidebar_view',$data);
           $this->load->view('users/admin/common/content_top_view',$data);
-        $this->load->view('users/admin/gettew_admin_manage_subject_view',$data);
+        $this->load->view('users/admin/admin_manage_subject_view',$data);
           $this->load->view('common/footer_view',$data);
 
 
@@ -243,7 +243,7 @@ if (!$this->form_validation->run()) {
           $this->load->view('users/admin/common/nav_view',$data);
           $this->load->view('users/admin/common/sidebar_view',$data);
           $this->load->view('users/admin/common/content_top_view',$data);
-        $this->load->view('users/admin/gettew_admin_school_details_view',$data);
+        $this->load->view('users/admin/admin_school_details_view',$data);
           $this->load->view('common/footer_view',$data);
 }else{
  
@@ -312,7 +312,7 @@ $this->upload->do_upload('schoollogo');
           $this->load->view('users/admin/common/nav_view',$data);
           $this->load->view('users/admin/common/sidebar_view',$data);
           $this->load->view('users/admin/common/content_top_view',$data);
-        $this->load->view('users/admin/gettew_admin_details_view',$data);
+        $this->load->view('users/admin/admin_details_view',$data);
           $this->load->view('common/footer_view',$data);
 
 
@@ -471,7 +471,7 @@ $this->upload->do_upload('profileimage');
           $this->load->view('users/admin/common/nav_view',$data);
           $this->load->view('users/admin/common/sidebar_view',$data);
           $this->load->view('users/admin/common/content_top_view',$data);
-        $this->load->view('users/admin/gettew_admin_manage_staff_view',$data);
+        $this->load->view('users/admin/admin_manage_staff_view',$data);
           $this->load->view('common/footer_view',$data);
 
 
@@ -547,7 +547,7 @@ $this->staff_model->insert_new_staff($staff_data);
           $this->load->view('users/admin/common/nav_view',$data);
           $this->load->view('users/admin/common/sidebar_view',$data);
           $this->load->view('users/admin/common/content_top_view',$data);
-        $this->load->view('users/admin/gettew_admin_payroll_view',$data);
+        $this->load->view('users/admin/admin_payroll_view',$data);
           $this->load->view('common/footer_view',$data);
 
 
@@ -639,7 +639,7 @@ $data['pagination'] = $this->pagination->create_links();
           $this->load->view('users/admin/common/nav_view',$data);
           $this->load->view('users/admin/common/sidebar_view',$data);
           $this->load->view('users/admin/common/content_top_view',$data);
-        $this->load->view('users/admin/gettew_admin_payments_view',$data);
+        $this->load->view('users/admin/admin_payments_view',$data);
           $this->load->view('common/footer_view',$data);
 
 
@@ -665,7 +665,7 @@ if (!$this->form_validation->run()) {
           $this->load->view('users/admin/common/nav_view',$data);
           $this->load->view('users/admin/common/sidebar_view',$data);
           $this->load->view('users/admin/common/content_top_view',$data);
-        $this->load->view('users/admin/gettew_admin_fund_account_view',$data);
+        $this->load->view('users/admin/admin_fund_account_view',$data);
           $this->load->view('common/footer_view',$data);
       }else{
 
@@ -706,7 +706,7 @@ $this->schools_model->insert_school_payment($payment);
           $this->load->view('users/admin/common/nav_view',$data);
           $this->load->view('users/admin/common/sidebar_view',$data);
           $this->load->view('users/admin/common/content_top_view',$data);
-        $this->load->view('users/admin/gettew_admin_fund_account_pre_payment_gateway_view',$data);
+        $this->load->view('users/admin/admin_fund_account_pre_payment_gateway_view',$data);
           $this->load->view('common/footer_view',$data);
 
       } 
@@ -874,7 +874,7 @@ $cond = array(
           $this->load->view('users/admin/common/nav_view',$data);
           $this->load->view('users/admin/common/sidebar_view',$data);
           $this->load->view('users/admin/common/content_top_view',$data);
-        $this->load->view('users/admin/gettew_view_student_paid_view',$data);
+        $this->load->view('users/admin/view_student_paid_view',$data);
           $this->load->view('common/footer_view',$data);
 
 }
@@ -909,7 +909,7 @@ $this->load->view('users/admin/common/header_view',$data);
 $this->load->view('users/admin/common/nav_view',$data);
 $this->load->view('users/admin/common/sidebar_view',$data);
 $this->load->view('users/admin/common/content_top_view',$data);
-$this->load->view('users/admin/gettew_idcard_view',$data);
+$this->load->view('users/admin/idcard_view',$data);
 $this->load->view('common/footer_view',$data);
 
 
@@ -930,7 +930,7 @@ $this->load->view('common/footer_view',$data);
           $this->load->view('users/admin/common/nav_view',$data);
           $this->load->view('users/admin/common/sidebar_view',$data);
           $this->load->view('users/admin/common/content_top_view',$data);
-      $this->load->view('users/admin/gettew_admin_website_view',$data);
+      $this->load->view('users/admin/admin_website_view',$data);
           $this->load->view('common/footer_view',$data);
 
 
@@ -969,7 +969,7 @@ $data['school_sessions'] = json_decode($school['session'],true);
           $this->load->view('users/admin/common/nav_view',$data);
           $this->load->view('users/admin/common/sidebar_view',$data);
           $this->load->view('users/admin/common/content_top_view',$data);
-        $this->load->view('users/admin/gettew_change_session_view',$data);
+        $this->load->view('users/admin/change_session_view',$data);
           $this->load->view('common/footer_view',$data);
 
   }else{
@@ -1040,7 +1040,7 @@ $data['school_sessions'] = json_decode($data['school']['session'],true);
           $this->load->view('users/admin/common/nav_view',$data);
           $this->load->view('users/admin/common/sidebar_view',$data);
           $this->load->view('users/admin/common/content_top_view',$data);
-        $this->load->view('users/admin/gettew_change_term_view',$data);
+        $this->load->view('users/admin/change_term_view',$data);
           $this->load->view('common/footer_view',$data);
 
   }else{
@@ -1149,7 +1149,7 @@ $_SESSION['action_status_report'] = "<span class='w3-text-green'>Student Optons 
           $this->load->view('users/admin/common/nav_view',$data);
           $this->load->view('users/admin/common/sidebar_view',$data);
           $this->load->view('users/admin/common/content_top_view',$data);
-         $this->load->view('users/admin/gettew_admin_staff_list_view',$data);
+         $this->load->view('users/admin/admin_staff_list_view',$data);
           $this->load->view('common/footer_view',$data);
 
 
@@ -1187,7 +1187,7 @@ $data['school'] = $school;
           $this->load->view('users/admin/common/nav_view',$data);
           $this->load->view('users/admin/common/sidebar_view',$data);
           $this->load->view('users/admin/common/content_top_view',$data);
-        $this->load->view('users/admin/gettew_admin_result_settings_view',$data);
+        $this->load->view('users/admin/admin_result_settings_view',$data);
           $this->load->view('common/footer_view',$data);
 
   }else{
@@ -1272,7 +1272,7 @@ show_page('dashboard/result_settings');
           $this->load->view('users/admin/common/nav_view',$data);
           $this->load->view('users/admin/common/sidebar_view',$data);
           $this->load->view('users/admin/common/content_top_view',$data);
-         $this->load->view('users/admin/gettew_admin_students_list_view',$data);
+         $this->load->view('users/admin/admin_students_list_view',$data);
           $this->load->view('common/footer_view',$data);
 
 
@@ -1309,7 +1309,7 @@ $data['levels'] = $this->schools_model->get_levels($arr);
           $this->load->view('users/admin/common/nav_view',$data);
           $this->load->view('users/admin/common/sidebar_view',$data);
           $this->load->view('users/admin/common/content_top_view',$data);
-        $this->load->view('users/admin/gettew_admin_school_settings_view',$data);
+        $this->load->view('users/admin/admin_school_settings_view',$data);
           $this->load->view('common/footer_view',$data);
 
 
@@ -1399,7 +1399,7 @@ $data['levels'] = $this->schools_model->get_levels($arr);
           $this->load->view('users/admin/common/nav_view',$data);
           $this->load->view('users/admin/common/sidebar_view',$data);
           $this->load->view('users/admin/common/content_top_view',$data);
-        $this->load->view('users/admin/gettew_admin_manage_fee_view',$data);
+        $this->load->view('users/admin/admin_manage_fee_view',$data);
           $this->load->view('common/footer_view',$data);
 
 }else{
@@ -1549,7 +1549,7 @@ $data['options'] = json_decode($this->schools_model->get_student_option($_SESSIO
       $this->load->view('users/admin/common/nav_view',$data);
       $this->load->view('users/admin/common/sidebar_view',$data);
       $this->load->view('users/admin/common/content_top_view',$data);
-    $this->load->view('users/admin/gettew_admin_manage_students_view',$data);
+    $this->load->view('users/admin/admin_manage_students_view',$data);
       $this->load->view('common/footer_view',$data);
 }else{
 
@@ -1703,7 +1703,7 @@ show_page('dashboard/student_details/'.$ref_id);
       $this->load->view('users/admin/common/nav_view',$data);
       $this->load->view('users/admin/common/sidebar_view',$data);
       $this->load->view('users/admin/common/content_top_view',$data);
-    $this->load->view('users/admin/gettew_student_search_view',$data);
+    $this->load->view('users/admin/student_search_view',$data);
       $this->load->view('common/footer_view',$data);
 
 
@@ -1733,7 +1733,7 @@ if (!$this->form_validation->run()) {
       $this->load->view('users/admin/common/nav_view',$data);
       $this->load->view('users/admin/common/sidebar_view',$data);
       $this->load->view('users/admin/common/content_top_view',$data);
-    $this->load->view('users/admin/gettew_request_cbt_setup_view',$data);
+    $this->load->view('users/admin/request_cbt_setup_view',$data);
       $this->load->view('common/footer_view',$data);
 
 }else{
@@ -1814,7 +1814,7 @@ $input_text = $this->input->post('search');
       $this->load->view('users/admin/common/nav_view',$data);
       $this->load->view('users/admin/common/sidebar_view',$data);
       $this->load->view('users/admin/common/content_top_view',$data);
-    $this->load->view('users/admin/gettew_staff_search_view',$data);
+    $this->load->view('users/admin/staff_search_view',$data);
       $this->load->view('common/footer_view',$data);
 
 
@@ -1896,7 +1896,7 @@ $data['school_id'] = $_SESSION['school_id'];
           $this->load->view('users/admin/common/nav_view',$data);
           $this->load->view('users/admin/common/sidebar_view',$data);
           $this->load->view('users/admin/common/content_top_view',$data);
-        $this->load->view('users/admin/gettew_admin_post_student_reg_view',$data);
+        $this->load->view('users/admin/admin_post_student_reg_view',$data);
           $this->load->view('common/footer_view',$data);
 
 
@@ -1923,7 +1923,7 @@ $data['school_id'] = $_SESSION['school_id'];
           $this->load->view('users/admin/common/nav_view',$data);
           $this->load->view('users/admin/common/sidebar_view',$data);
           $this->load->view('users/admin/common/content_top_view',$data);
-        $this->load->view('users/admin/gettew_admin_post_staff_reg_view',$data);
+        $this->load->view('users/admin/admin_post_staff_reg_view',$data);
           $this->load->view('common/footer_view',$data);
 
 
@@ -1949,7 +1949,7 @@ if(!$this->form_validation->run())
           $this->load->view('users/admin/common/nav_view',$data);
           $this->load->view('users/admin/common/sidebar_view',$data);
           $this->load->view('users/admin/common/content_top_view',$data);
-        $this->load->view('users/admin/gettew_admin_create_application_form_view',$data);
+        $this->load->view('users/admin/admin_create_application_form_view',$data);
           $this->load->view('common/footer_view',$data);
 
 
@@ -2060,7 +2060,7 @@ $data['schl_sec_div'] = json_decode($data['school']['session_division'],true);
           $this->load->view('users/admin/common/nav_view',$data);
           $this->load->view('users/admin/common/sidebar_view',$data);
           $this->load->view('users/admin/common/content_top_view',$data);
-        $this->load->view('users/admin/gettew_admin_add_offline_payment_view',$data);
+        $this->load->view('users/admin/admin_add_offline_payment_view',$data);
           $this->load->view('common/footer_view',$data);
 }else{
 
@@ -2141,7 +2141,7 @@ if (!$this->form_validation->run()) {
           $this->load->view('users/admin/common/nav_view',$data);
           $this->load->view('users/admin/common/sidebar_view',$data);
           $this->load->view('users/admin/common/content_top_view',$data);
-        $this->load->view('users/admin/gettew_admin_upgrade_account_view',$data);
+        $this->load->view('users/admin/admin_upgrade_account_view',$data);
           $this->load->view('common/footer_view',$data);
       }else{
  //select package by title
@@ -2185,7 +2185,7 @@ $data['school'] =$school;
           $this->load->view('users/admin/common/nav_view',$data);
           $this->load->view('users/admin/common/sidebar_view',$data);
           $this->load->view('users/admin/common/content_top_view',$data);
-        $this->load->view('users/admin/gettew_admin_upgrade_success_view',$data);
+        $this->load->view('users/admin/admin_upgrade_success_view',$data);
           $this->load->view('common/footer_view',$data);
 
 return;
@@ -2235,7 +2235,7 @@ if (!isset($_POST['submit'])){
           $this->load->view('users/admin/common/nav_view',$data);
           $this->load->view('users/admin/common/sidebar_view',$data);
           $this->load->view('users/admin/common/content_top_view',$data);
-        $this->load->view('users/admin/gettew_admin_renew_account_view',$data);
+        $this->load->view('users/admin/admin_renew_account_view',$data);
           $this->load->view('common/footer_view',$data);
       }else{
 //check if balance 
@@ -2276,7 +2276,7 @@ $data['school'] =$school;
           $this->load->view('users/admin/common/nav_view',$data);
           $this->load->view('users/admin/common/sidebar_view',$data);
           $this->load->view('users/admin/common/content_top_view',$data);
-        $this->load->view('users/admin/gettew_admin_renew_success_view',$data);
+        $this->load->view('users/admin/admin_renew_success_view',$data);
           $this->load->view('common/footer_view',$data);
 
 return;
