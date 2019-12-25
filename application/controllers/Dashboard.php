@@ -94,7 +94,7 @@ if (($data['school']['license']== "trial") && ($data['school']['license_expire']
           $this->load->view('users/admin/admin_dash_view',$data);
 
           }
-         // $this->load->view('common/footer_view',$data);
+          $this->load->view('common/footer_view',$data);
 
 
 

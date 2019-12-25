@@ -30,11 +30,11 @@ $post = $this->db->get_where("blog",array("ref" => $action['object_ref']))->row_
 
 echo "<div class='w3-border w3-margin w3-padding'>";
 echo "<span class='w3-text-teal'>";
-echo "<a href='".site_url('gettew_webfunction/news_preview/'.$post['subdomain'].'/'.$post['slug'])."'>";
+echo "<a href='".site_url('webfunction/news_preview/'.$post['subdomain'].'/'.$post['slug'])."'>";
 echo $post['title'];
 echo "</a>";
-echo "<a class='w3-tiny w3-button w3-margin w3-green w3-hover-white w3-border w3-border-green w3-hover-text-green' href='".site_url('gettew_dashboard_cont/action/approve/post/'.$post['id']."/".$post['ref'])."'>Approve</a>";
-echo "<a class='w3-tiny w3-button w3-margin w3-red w3-hover-white w3-border w3-border-red w3-hover-text-red' href='".site_url('gettew_dashboard_cont/action/disapprove/post/'.$post['id']."/".$post['ref'])."'>Reject</a>";
+echo "<a class='w3-tiny w3-button w3-margin w3-green w3-hover-white w3-border w3-border-green w3-hover-text-green' href='".site_url('dashboard_cont/action/approve/post/'.$post['id']."/".$post['ref'])."'>Approve</a>";
+echo "<a class='w3-tiny w3-button w3-margin w3-red w3-hover-white w3-border w3-border-red w3-hover-text-red' href='".site_url('dashboard_cont/action/disapprove/post/'.$post['id']."/".$post['ref'])."'>Reject</a>";
 echo "</span><br>";
 
 echo "</div>";
@@ -54,8 +54,8 @@ echo $sms['message'];
 echo "</div>";
 //echo var_dump($author);
 echo "<span class=''>".$author['firstname']." ".$author['lastname']." (".$author['staff_id'].")</span>";
-echo "<a class='w3-tiny w3-button w3-margin w3-green w3-hover-white w3-border w3-border-green w3-hover-text-green' href='".site_url('gettew_dashboard_cont/action/approve/sms/'.$sms['id']."/".$sms['ref'])."'>Approve</a>";
-echo "<a class='w3-tiny w3-button w3-margin w3-red w3-hover-white w3-border w3-border-red w3-hover-text-red' href='".site_url('gettew_dashboard_cont/action/disapprove/sms/'.$sms['id']."/".$sms['ref'])."'>Reject</a>";
+echo "<a class='w3-tiny w3-button w3-margin w3-green w3-hover-white w3-border w3-border-green w3-hover-text-green' href='".site_url('dashboard_cont/action/approve/sms/'.$sms['id']."/".$sms['ref'])."'>Approve</a>";
+echo "<a class='w3-tiny w3-button w3-margin w3-red w3-hover-white w3-border w3-border-red w3-hover-text-red' href='".site_url('dashboard_cont/action/disapprove/sms/'.$sms['id']."/".$sms['ref'])."'>Reject</a>";
 echo "</span><br>";
 
 echo "</div>";
