@@ -70,7 +70,7 @@ if(!$this->form_validation->run())
   $this->load->view('users/admin/common/nav_view',$data);
   $this->load->view('users/admin/common/sidebar_view',$data);
   $this->load->view('users/admin/common/content_top_view',$data);
-  $this->load->view('users/admin/gettew_admin_location_view',$data);
+  $this->load->view('users/admin/admin_location_view',$data);
   $this->load->view('common/footer_view',$data);
 
 }else{
@@ -117,7 +117,7 @@ if(!$this->form_validation->run())
           $this->load->view('users/admin/common/nav_view',$data);
           $this->load->view('users/admin/common/sidebar_view',$data);
           $this->load->view('users/admin/common/content_top_view',$data);
-      $this->load->view('users/admin/gettew_admin_sms_view',$data);
+      $this->load->view('users/admin/admin_sms_view',$data);
           $this->load->view('common/footer_view',$data);
 
 }else{
@@ -250,7 +250,7 @@ $_SESSION['receivers'] = $number_arrays;
           $this->load->view('users/admin/common/nav_view',$data);
           $this->load->view('users/admin/common/sidebar_view',$data);
           $this->load->view('users/admin/common/content_top_view',$data);
-      $this->load->view('users/admin/gettew_admin_confirm_sms_view',$data);
+      $this->load->view('users/admin/admin_confirm_sms_view',$data);
           $this->load->view('common/footer_view',$data);
 
 
@@ -359,7 +359,7 @@ public function post_send_sms()
           $this->load->view('users/admin/common/nav_view',$data);
           $this->load->view('users/admin/common/sidebar_view',$data);
           $this->load->view('users/admin/common/content_top_view',$data);
-      $this->load->view('users/admin/gettew_admin_post_sms_view',$data);
+      $this->load->view('users/admin/admin_post_sms_view',$data);
           $this->load->view('common/footer_view',$data);
 
 
@@ -437,7 +437,7 @@ if (!$this->form_validation->run()) {
       $this->load->view('users/admin/common/nav_view',$data);
       $this->load->view('users/admin/common/sidebar_view',$data);
       $this->load->view('users/admin/common/content_top_view',$data);
-    $this->load->view('users/admin/gettew_generate_result_checker_view',$data);
+    $this->load->view('users/admin/generate_result_checker_view',$data);
       $this->load->view('common/footer_view',$data);
 
 }else{
@@ -500,7 +500,7 @@ if (!$this->form_validation->run()) {
       $this->load->view('users/admin/common/nav_view',$data);
       $this->load->view('users/admin/common/sidebar_view',$data);
       $this->load->view('users/admin/common/content_top_view',$data);
-    $this->load->view('users/admin/gettew_request_idcard_view',$data);
+    $this->load->view('users/admin/request_idcard_view',$data);
       $this->load->view('common/footer_view',$data);
 
 }else{
