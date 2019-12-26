@@ -14,7 +14,7 @@
 	<li>Parent  Module</li>
 	<li>SMS Communication btw Parent and School</li>
 	<li>Result Publish & Management Module</li>
-	<li>Fee collection</li>
+	<li>Fee collection(Offline & Online fee Recording)</li>
 	<li>Student Id card printing that let student be able to check result <br>,pay necessary fee by scanning powered by QR-CODE</li>
 
 </ul>
