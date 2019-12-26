@@ -95,7 +95,7 @@ if(isset($_SESSION['logged_in']) && isset($_SESSION['id']) && $this->uri->segmen
 {
   
  //$pending_actions = $this->db->get_where("pending_actions",array("school_id"=> $_SESSION['school_id'],'achieve_status'=>"false"))->result_array();
-
+$pending_actions =[];
 $hold = '<div onclick=\'document.getElementById("notification_container").style.display="block"\' class="w3-card w3-padding w3-circle"  style="position: fixed;bottom:10%;right:3%;"> <i 
  class="fa fa-bell-o w3-label w3-xxlarge w3-serif"></i><span class="w3-tag w3-red w3-text-white w3-circle">'.count($pending_actions).'</i></div>';
 echo $hold;
