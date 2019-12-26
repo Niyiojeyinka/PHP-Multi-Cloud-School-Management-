@@ -45,7 +45,7 @@
 <br>
 
 ## Requirement
-PHP 5.6+,MSQL 5+ 
+PHP 5.6+,MSQL 5+ ,Codeigniter 3 Framework requirements
 <br>
 
 ## NOTICE : 
