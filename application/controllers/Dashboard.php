@@ -571,7 +571,7 @@ $this->staff_model->insert_new_staff($staff_data);
  
 
 $data['school'] = $this->schools_model->get_school_by_id($_SESSION['school_id']);
-$data['school_sessions'] = json_decode($data['school']['session'],true);
+$data['school_sessions'] = json_decode($data['school']['sessions'],true);
 $data['schl_sec_div'] = json_decode($data['school']['session_division'],true);
 $cond = array(
 'school_id'=> $_SESSION['school_id'],
@@ -1032,7 +1032,7 @@ $data['school_id']
 $data['levels'] = $this->schools_model->get_levels($arr);
 
 $data['school'] = $this->schools_model->get_school_by_id($_SESSION['school_id']);
-$data['school_sessions'] = json_decode($data['school']['session'],true);
+$data['school_sessions'] = json_decode($data['school']['sessions'],true);
 
 
 
@@ -1368,7 +1368,7 @@ $this->form_validation->set_rules("fee_amount","Fee Amount","required|is_numeric
 $this->form_validation->set_rules("class_level","Class or Level","required");
 
 $data['school'] = $this->schools_model->get_school_by_id($_SESSION['school_id']);
-$data['school_sessions'] = json_decode($data['school']['session'],true);
+$data['school_sessions'] = json_decode($data['school']['sessions'],true);
 $data['schl_sec_div'] = json_decode($data['school']['session_division'],true);
 
 $data['options'] = json_decode($this->schools_model->get_student_option($_SESSION['school_id']),true);
@@ -2050,7 +2050,7 @@ if (!$this->form_validation->run()){
  
 
 $data['school'] = $this->schools_model->get_school_by_id($_SESSION['school_id']);
-$data['school_sessions'] = json_decode($data['school']['session'],true);
+$data['school_sessions'] = json_decode($data['school']['sessions'],true);
 $data['schl_sec_div'] = json_decode($data['school']['session_division'],true);
  
 
