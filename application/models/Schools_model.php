@@ -43,7 +43,7 @@ public function save_result($row,$school_id,$session,$term)
 //add if not else edit 
 $row['school_id'] = $school_id;
 $row['subject'] = $this->input->post('subject');
-$row['session'] = $session;
+$row['sessions'] = $session;
 $row['term'] = $term;
 $row['time']=time();
 $row['year'] = "20".date('y');
@@ -52,7 +52,7 @@ $row['level'] =$this->db->get_where('students',array('student_id' => $row['stude
 
 
 /*unique key = concatenation of school_id session student_id term subject  */
-$unique_key = md5(strtolower($row['school_id'].$row['session'].$row['term'].$row['student_id'].$row['subject']));
+$unique_key = md5(strtolower($row['school_id'].$row['sessions'].$row['term'].$row['student_id'].$row['subject']));
 $row['unique_key'] = $unique_key;
 
   $search_term = $this->db->get_where("results",array("unique_key" => $unique_key));
@@ -186,7 +186,7 @@ public function insert_idcard_request($request)
 }
 public function insert_sessions($school_session,$school_id)
 {
-  $this->db->update('schools',array('session'=> $school_session),array('id' => $school_id));
+  $this->db->update('schools',array('sessions'=> $school_session),array('id' => $school_id));
 }
 
 
