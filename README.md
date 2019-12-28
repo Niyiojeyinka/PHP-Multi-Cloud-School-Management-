@@ -28,7 +28,7 @@
 <ul>
 	<li>Total Refactoring</li>
 	<li>Auto Theme Installation</li>
-    <li>Dynamic Payment integration</li>
+    <li>Dynamic Payment integration Selection</li>
     <li>Auto install</li>
 </ul>
 
