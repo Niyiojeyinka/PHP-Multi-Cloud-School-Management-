@@ -6,7 +6,7 @@ class Prewebsettings_action extends CI_Controller {
 public function __construct()
 {
      parent::__construct();
-  $this->load->model(array('websites_model','schools_model','users_model','media_model'));
+  $this->load->model(array('websites_model','schools_model','users_model','media_model','back_model'));
   $this->load->helper(array('url','form','blog_helper','page_helper','theme_helper'));
      $this->load->library(array('form_validation','user_agent'));
 
@@ -17,12 +17,17 @@ public function __construct()
 
 
 
-      $this->siteName = $this->back_model->get_system_variable("site_name");
-      $this->author = $this->back_model->get_system_variable("author");
-      $this->keywords = $this->back_model->get_system_variable("keywords");
-      $this->description= $this->back_model->get_system_variable("description");
-      $this->noindex = '<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">';
+       $meta= $this->back_model->get_site_meta();
 
+   
+       $this->tagLine =$meta['title'];
+       $this->siteName=$meta['sitename'];
+       $this->keywords=$meta['keywords'];
+       $this->description=$meta['description'];
+       $this->author=$meta['author'];
+        $this->noindex = '<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">';
+       $this->favicon = base_url('assets/images/favicon.ico');
+  
 }
  
 
