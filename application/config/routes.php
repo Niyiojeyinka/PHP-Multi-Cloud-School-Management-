@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------------
@@ -50,8 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 
-
-$route['students'] =  'page/students_login';
+$route['students'] = 'page/students_login';
 $route['students/login/(:any)'] = 'page/students_login/$1';
 $route['students/login'] = 'page/students_login';
 //temporay interfacce for students
@@ -62,44 +61,32 @@ $route['staff'] = 'staff/dashboard';
 $route['staff/index'] = 'staff/dashboard';
 $route['staff/login/(:any)'] = 'page/staff_login/$1';
 
-
 $route['parents/login'] = 'page/parents_login';
 $route['parent'] = 'parents/dashboard';
 $route['parents'] = 'parents/dashboard';
 $route['parents/index'] = 'parents/dashboard';
 $route['parents/login/(:any)'] = 'page/parents_login/$1';
 
-$address = $_SERVER[ 'HTTP_HOST' ];
-if($address == "gettew.dev" || $address =="www.gettew.dev" || $address =="192.168.43.96" || $address =="127.0.0.1" )
-{
-$route['pricing'] = 'page/pricing';	
-$route['login'] = 'page/login';
-$route['Login'] = 'page/login';
-$route['register'] = 'page/register';
-$route['Register'] = 'page/register';
-$route['web_dashboard'] = 'web_dashboard/index';
+$address = $_SERVER['HTTP_HOST'];
+if ($address == WEB_BASE_URL) {
+    $route['pricing'] = 'page/pricing';
+    $route['login'] = 'page/login';
+    $route['Login'] = 'page/login';
+    $route['register'] = 'page/register';
+    $route['Register'] = 'page/register';
+    $route['web_dashboard'] = 'web_dashboard/index';
 
-$route['default_controller'] = 'page';
+    $route['default_controller'] = 'page';
 
-$route['contact_us'] = 'page/contact_us';
+    $route['contact_us'] = 'page/contact_us';
 
+    $route['404_override'] = '';
+    $route['translate_uri_dashes'] = false;
+} else {
+    $route['(:any)'] = 'subwebsite/index/$1';
+    $route['(:any)/(:any)'] = 'subwebsite/index/$1';
 
-
-
-$route['404_override'] = '';
-$route['translate_uri_dashes'] = FALSE;
-
-
-}else{
-	
-
-	
-$route['(:any)'] = 'subwebsite/index/$1';
-$route['(:any)/(:any)'] = 'subwebsite/index/$1';
-
-$route['default_controller'] = 'subwebsite';
-$route['404_override'] = '';
-$route['translate_uri_dashes'] = FALSE;
-
-
+    $route['default_controller'] = 'subwebsite';
+    $route['404_override'] = '';
+    $route['translate_uri_dashes'] = false;
 }
