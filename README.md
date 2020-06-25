@@ -19,12 +19,12 @@
 
 </ul>
 
-
 </ul>
 
 <br>
 
 ## Todo
+
 <ul>
 	<li>Total Refactoring</li>
 	<li>Auto Theme Installation</li>
@@ -35,6 +35,7 @@
 <br>
 
 ## Installation
+
 <ul>
 	<li>Copy the files to your root directory</li>
 	<li>Change database connection details at application/config/database.php</li>
@@ -45,10 +46,24 @@
 <br>
 
 ## Requirement
+
 PHP 5.6+,MSQL 5+ ,Codeigniter 3 Framework requirements
 <br>
 
-## NOTICE : 
+## Todo(s)
+
+<ul>
+<li>Make Home Page Editable </li>
+<li>Make more customizable</li>
+<li>Work in super admin dashboard</li>
+<li>Work on web editor</li>
+<li>Work auto theme installation</li>
+<li>Work on theme creation docs</li>
+
+</ul>
+
+<br>
+## NOTICE :
 
 This project was urgently needed when it was written and was not originally plan to be open source so work is still going on it to suit the new goal
 
