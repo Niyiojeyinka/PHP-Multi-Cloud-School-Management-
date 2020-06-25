@@ -3,6 +3,9 @@
 <p>This an online multi school management software for School and colleges ,this is not exactly a school management software but a school management software creator.See it as a wordpress.com but for schools needs </p>
 
 <br>
+<img src="https://res.cloudinary.com/open-source/image/upload/v1593120736/Adware/csm_o5qm9t.png"/>
+
+Demo Available at <a href="https://web-web20.000webhostapp.com/web">https://web-web20.000webhostapp.com/web</a>
 
 ## Features
 
