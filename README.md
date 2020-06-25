@@ -26,17 +26,6 @@ Demo Available at <a href="https://web-web20.000webhostapp.com/web">https://web-
 
 <br>
 
-## Todo
-
-<ul>
-	<li>Total Refactoring</li>
-	<li>Auto Theme Installation</li>
-    <li>Dynamic Payment integration Selection</li>
-    <li>Auto install</li>
-</ul>
-
-<br>
-
 ## Installation
 
 <ul>
@@ -56,6 +45,10 @@ PHP 5.6+,MSQL 5+ ,Codeigniter 3 Framework requirements
 ## Todo(s)
 
 <ul>
+<li>Total Refactoring</li>
+	<li>Auto Theme Installation</li>
+    <li>Dynamic Payment integration Selection</li>
+    <li>Auto install</li>
 <li>Make Home Page Editable </li>
 <li>Make more customizable</li>
 <li>Work in super admin dashboard</li>
