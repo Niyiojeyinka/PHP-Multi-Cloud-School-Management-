@@ -30,7 +30,7 @@ if (isset( $_SERVER ['HTTPS' ]) && $_SERVER
 	$ssl_set
 = "";
 }
-$config[ 'base_url' ] = 'http'.$ssl_set.'://'.$_SERVER[ 'HTTP_HOST' ].'/csm';
+$config[ 'base_url' ] = 'http'.$ssl_set.'://'.$_SERVER[ 'HTTP_HOST' ];
 /*
 |--------------------------------------------------------------------------
 | Index File
