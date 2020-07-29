@@ -512,7 +512,6 @@ $queries = array(
         phone int,
         amount DECIMAL(19,2) NOT NULL,
         status varchar(128),
-         year varchar(128),
         time int(20),
         PRIMARY KEY (id)
 );"
