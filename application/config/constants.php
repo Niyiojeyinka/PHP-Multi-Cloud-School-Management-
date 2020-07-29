@@ -90,4 +90,4 @@ defined('EXIT__AUTO_MAX') or define('EXIT__AUTO_MAX', 125); // highest automatic
 
 /** WEB APPLICATION CONSTANT */
 
-defined('WEB_BASE_URL') or define('WEB_BASE_URL', '127.0.0.1'); // highest automatically-assigned error code
+defined('WEB_BASE_URL') or define('WEB_BASE_URL', '127.0.0.1'); //multisite base url

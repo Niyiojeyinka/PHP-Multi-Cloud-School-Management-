@@ -68,7 +68,10 @@ $route['parents/index'] = 'parents/dashboard';
 $route['parents/login/(:any)'] = 'page/parents_login/$1';
 
 $address = $_SERVER['HTTP_HOST'];
-if ($address == WEB_BASE_URL) {
+if (
+    $address == WEB_BASE_URL ||
+    in_array($address, ['127.0.0.1', 'localhost'])
+) {
     $route['pricing'] = 'page/pricing';
     $route['login'] = 'page/login';
     $route['Login'] = 'page/login';
