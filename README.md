@@ -5,7 +5,7 @@
 <br>
 <img src="https://res.cloudinary.com/open-source/image/upload/v1593120736/Adware/csm_o5qm9t.png"/>
 
-Demo Available at <a href="https://web-web20.000webhostapp.com/web">https://web-web20.000webhostapp.com/web</a>
+Demo Available at <a href="https://web-web20.000webhostapp.com/web">https://web-web20.000webhostapp.com/csm</a>
 
 ## Features
 
