@@ -456,9 +456,9 @@ $queries = array(
         level varchar(128) NOT NULL,
         term varchar(128) NOT NULL,
         session varchar(128) NOT NULL,
-        option varchar(128) NOT NULL,
+        `option` varchar(128) NOT NULL,
         fee_title varchar(128),
-        time varchar(128) NOT NULL,
+        `time` varchar(128) NOT NULL,
        PRIMARY KEY (id)
 );"
 //school buying from sass = sg
@@ -470,7 +470,7 @@ $queries = array(
         term varchar(128) NOT NULL,
         session varchar(128) NOT NULL,
         label varchar(128),
-        time varchar(128) NOT NULL,
+        `time` varchar(128) NOT NULL,
        PRIMARY KEY (id)
 );",
 "CREATE TABLE sms_history (
@@ -484,7 +484,7 @@ $queries = array(
         term varchar(128) NOT NULL,
         ref varchar(128) NOT NULL,
         status varchar(128),
-        time varchar(128) NOT NULL,
+        `time` varchar(128) NOT NULL,
        PRIMARY KEY (id)
 );",
  "CREATE TABLE payroll (
@@ -498,7 +498,7 @@ $queries = array(
         amount DECIMAL(19,2) NOT NULL,
         status varchar(128),
          email varchar(128),
-        time int(20),
+        `time` int(20),
         details text,
         PRIMARY KEY (id)
 );",
@@ -512,7 +512,7 @@ $queries = array(
         phone int,
         amount DECIMAL(19,2) NOT NULL,
         status varchar(128),
-        time int(20),
+        `time` int(20),
         PRIMARY KEY (id)
 );"
 ,
@@ -523,7 +523,7 @@ $queries = array(
         phone varchar(128) NOT NULL,
         plan varchar(128) NOT NULL,
         status varchar(128),
-        time int(20),
+        `time` int(20),
         PRIMARY KEY (id)
 );",
  "CREATE TABLE pending_sms (
@@ -534,7 +534,7 @@ $queries = array(
         message text,
         ref varchar(255),
         status varchar(128),
-        time int(20),
+        `time` int(20),
         PRIMARY KEY (id)
 );",
  "CREATE TABLE pending_actions (
@@ -544,7 +544,7 @@ $queries = array(
         achieve_status text,
         object_ref varchar(128),
         school_id varchar(128),
-        time int(20),
+        `time` int(20),
         PRIMARY KEY (id)
 );",
 "CREATE TABLE results_total_score (
